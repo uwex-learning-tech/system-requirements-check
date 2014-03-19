@@ -2,7 +2,7 @@
 /**
  * Plugin Name: System Requirements Check
  * Plugin URI:
- * Description: A system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be used to let the end-users be aware of that their system may not be optimal for specific tasks or operations. To display the result on a page, use this shortcode: <code>[system_requirements_check]</code>.
+ * Description: A system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be used to let the end-users be aware of that their system may not be optimal for specific tasks or operations. To display the result on a page, use this shortcode: <code>[system-requirements-check]</code>.
  * Version: 0.5.0
  * Author: Ethan Lin
  * Author URI: http://www.ethanslin.com
@@ -27,10 +27,12 @@
 // exit if access directly
 if (!defined('ABSPATH'))
 	exit;
+
+define('SYSTEM_REQ_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ )))));
+
 /**
  * System Check Class
  */
- 
 class System_Requirements_Check {
 	
 	/**
@@ -48,7 +50,7 @@ class System_Requirements_Check {
 		
 		// add localization
 		//add_action('plugins_loaded', array($this, 'load_plugin_localization'));
-		
+
 	}
 	
 	/**
@@ -88,14 +90,13 @@ class System_Requirements_Check {
 	}
 	
 	/**
-	 * Add Admin CSS and JS files
+	 * Add Admin CSS files
 	 */
 	public function backend_scripts() {
 		
 		wp_enqueue_style('system-requirements-check-settings', plugin_dir_url(__FILE__) . 'assets/css/system-requirements-check-settings.css');
 		
 	}
-	 
 	
 } // end class System_Requirements_Check
 
@@ -107,7 +108,7 @@ register_activation_hook(__FILE__, array('System_Requirements_Check', 'activate'
 if (is_admin())
 	$system_requirements_check = new System_Requirements_Check();
 
-// add a link to the setting page onto the plugin page
+// add a link to the settings page onto the plugin page
 if (isset($system_requirements_check)) {
 	
 	// add the setting link to the plugins page
@@ -123,3 +124,17 @@ if (isset($system_requirements_check)) {
 
 $plugin = plugin_basename(__FILE__);
 add_filter("plugin_action_links_$plugin",'plugin_settings_link');
+
+// function lib
+include('includes/system-requirements-check-functions.php');
+
+// add shortcode
+include("includes/class-system-requirements-check-shortcodes.php");
+
+/**
+ * TO-DO NOTES:
+ * http://stackoverflow.com/questions/18070154/get-operating-system-info-with-php
+ * http://stackoverflow.com/questions/18285709/how-to-detect-flash-player-version-by-js
+ * http://stackoverflow.com/questions/2111383/how-to-get-users-java-version-using-php
+ * http://sveinbjorn.org/cookiecheck#javascript
+ */

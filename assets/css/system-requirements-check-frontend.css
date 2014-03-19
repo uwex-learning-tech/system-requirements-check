@@ -1,0 +1,36 @@
+@import url('../font/systemrequirementscheckfonts.css');
+
+.system_req_check.callout {
+	border-left: solid 4px #b1b1b1;
+	padding: 3px 6px;
+	background-color: #f7f7f7;
+}
+
+.system_req_check.callout.success {
+	border-left: solid 4px #56cd00;
+}
+
+.system_req_check.callout.info {
+	border-left: solid 4px #00aeff;
+}
+
+.system_req_check.callout.warning {
+	border-left: solid 4px #ff9200;
+}
+
+.system_req_check.callout.danger {
+	border-left: solid 4px #ff2700;
+}
+
+.system_req_check.callout p,
+.system_req_check.callout ul {
+    margin: 5px 0;
+}
+
+.system_req_check span[class^="icon-"].big,
+.system_req_check span[class*=" icon-"].big {
+    display: inline-block;
+	font-size: 200%;
+	vertical-align: bottom;
+	margin-right: 10px;
+}
