@@ -2,8 +2,8 @@
 /**
  * Plugin Name: System Requirements Check
  * Plugin URI:
- * Description: A system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be used to let the end-users be aware of that their system may not be optimal for specific tasks or operations. To display the result on a page, use this shortcode: <code>[system-requirements-check]</code>.
- * Version: 0.5.0
+ * Description: A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code  to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
+ * Version: 0.1.0
  * Author: Ethan Lin
  * Author URI: http://www.ethanslin.com
  * License: GPL2
@@ -25,8 +25,7 @@
 */
 
 // exit if access directly
-if (!defined('ABSPATH'))
-	exit;
+if (!defined('ABSPATH')) exit;
 
 define('SYSTEM_REQ_URL', untrailingslashit( plugins_url( basename( plugin_dir_path( __FILE__ )))));
 
@@ -47,9 +46,6 @@ class System_Requirements_Check {
 		// actions
 		add_action('admin_menu', array($this, 'add_menu'));
 		add_action('admin_enqueue_scripts', array($this, 'backend_scripts'));
-		
-		// add localization
-		//add_action('plugins_loaded', array($this, 'load_plugin_localization'));
 
 	}
 	
@@ -57,18 +53,18 @@ class System_Requirements_Check {
 	 * Activate the plugin
 	 */
 	public static function activate() {
-		
+
 		// Do nothing
-		
+
 	}
-	
+
 	/**
 	 * Deactivate the plugin
 	 */
 	public static function deactivate() {
-		
+
 		// Do nothing
-		
+
 	}
 	
 	/**
@@ -77,15 +73,6 @@ class System_Requirements_Check {
 	public function add_menu() {
 		
 		add_options_page('System Requirements Check', 'System Requirements Check', 'manage_options', 'system_requirements_check', array($this->settings_page, 'output'));
-		
-	}
-	
-	/**
-	 * Localization
-	 */
-	public function load_plugin_textdomain() {
-	
-		load_plugin_textdomain('system-requirements-check', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/');
 		
 	}
 	
@@ -100,7 +87,6 @@ class System_Requirements_Check {
 	
 } // end class System_Requirements_Check
 
-	
 // Installation and uninstallation hooks
 register_activation_hook(__FILE__, array('System_Requirements_Check', 'activate'));
 
@@ -108,33 +94,5 @@ register_activation_hook(__FILE__, array('System_Requirements_Check', 'activate'
 if (is_admin())
 	$system_requirements_check = new System_Requirements_Check();
 
-// add a link to the settings page onto the plugin page
-if (isset($system_requirements_check)) {
-	
-	// add the setting link to the plugins page
-	function plugin_settings_link($links) {
-	
-		$setting_link = '<a href="options-general.php?page=system_requirements_check">Settings</a>';
-		array_unshift($links, $setting_link);
-		return $links;
-		
-	}
-	
-}
-
-$plugin = plugin_basename(__FILE__);
-add_filter("plugin_action_links_$plugin",'plugin_settings_link');
-
-// function lib
-include('includes/system-requirements-check-functions.php');
-
 // add shortcode
 include("includes/class-system-requirements-check-shortcodes.php");
-
-/**
- * TO-DO NOTES:
- * http://stackoverflow.com/questions/18070154/get-operating-system-info-with-php
- * http://stackoverflow.com/questions/18285709/how-to-detect-flash-player-version-by-js
- * http://stackoverflow.com/questions/2111383/how-to-get-users-java-version-using-php
- * http://sveinbjorn.org/cookiecheck#javascript
- */
