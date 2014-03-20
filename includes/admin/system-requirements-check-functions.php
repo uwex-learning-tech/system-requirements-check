@@ -1,7 +1,6 @@
 <?php
 
-if (!defined('ABSPATH'))
-	exit; // exit if accessed directly
+if (!defined('ABSPATH')) exit; // exit if accessed directly
 
 /**
  * prep_option function

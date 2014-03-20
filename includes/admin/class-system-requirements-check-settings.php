@@ -1,7 +1,6 @@
 <?php
 
-if (!defined('ABSPATH'))
-	exit; // exit if accessed directly
+if (!defined('ABSPATH')) exit; // exit if accessed directly
 
 /**
  * System_Requirements_Check_Setting class
@@ -17,7 +16,6 @@ class System_Requirements_Check_Settings {
 	 public function __construct() {
 		 
 		 $this->settings_group = "system_requirements_check";
-		 
 		 add_action('admin_init', array($this, 'register_settings'));
 		 
 	 }
@@ -77,7 +75,7 @@ class System_Requirements_Check_Settings {
 						),
 						array(
 							'name'		=> 'jre',
-							'std'		=> '6'
+							'std'		=> '1.6.0'
 						),
 						array(
 							'name'		=> 'cookie',

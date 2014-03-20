@@ -1,5 +1,6 @@
 <div class="donation-box">
 	<h3>Donation</h3>
+	<p>If you enjoy using System Requirements Check and find it useful, please consider making a donation. Your donation will help encourage and support the plugin’s continued development and better user support.</p>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="T452FJN25TWKG">
