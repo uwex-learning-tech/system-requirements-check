@@ -1,39 +1,34 @@
 @import url('../font/systemrequirementscheckfonts.css');
 
-.system_req_check.callout {
+.system_req_check .callout {
 	border-left: solid 4px #b1b1b1;
 	padding: 3px 6px;
-	background-color: #ffffff;
+	background-color: #f8f8f8;
 	box-sizing: border-box;
-	margin:8px 0;
-	box-shadow: 0px 3px 6px #dbdbdb;
 }
-
-.system_req_check.callout.success {
-	border-left: solid 4px #56cd00;
+.system_req_check .callout.success {
+	border-color: #56cd00;
+	background-color: #f1ffe7;
 }
-
-.system_req_check.callout.info {
-	border-left: solid 4px #00aeff;
+.system_req_check .callout.info {
+	border-color: #00aeff;
+	background-color: #dff5ff;
 }
-
-.system_req_check.callout.warning {
-	border-left: solid 4px #ff9200;
+.system_req_check .callout.warning {
+	border-color: #ff8100;
+	background-color: #ffe4c1;
 }
-
-.system_req_check.callout .warning {
-	color:#ff9200;
+.system_req_check .callout .warning {
+	color:#ff8100;
 }
-
-.system_req_check.callout.danger {
-	border-left: solid 4px #ff2700;
+.system_req_check .callout.danger {
+	border-color: #ff2700;
+	background-color: #ffe0da;
 }
-
-.system_req_check.callout p,
-.system_req_check.callout ul {
+.system_req_check .callout p,
+.system_req_check .callout ul {
     margin: 5px 0;
 }
-
 .system_req_check span[class^="icon-"].big,
 .system_req_check span[class*=" icon-"].big {
     display: inline-block;

@@ -93,6 +93,6 @@ register_activation_hook(__FILE__, array('System_Requirements_Check', 'activate'
 // instantiate the plugin class
 if (is_admin())
 	$system_requirements_check = new System_Requirements_Check();
-
+	
 // add shortcode
-include("includes/class-system-requirements-check-shortcodes.php");
+require_once("includes/class-system-requirements-check-shortcodes.php");

@@ -8,5 +8,5 @@
 		<li>Add localizations</li>
 	</ul>
 	<p>Have suggestions or ideas? Send them to <a href="mailto:&#105;&#100;&#101;&#097;&#115;&#064;&#101;&#116;&#104;&#097;&#110;&#115;&#108;&#105;&#110;&#046;&#099;&#111;&#109;">&#105;&#100;&#101;&#097;&#115;&#064;&#101;&#116;&#104;&#097;&#110;&#115;&#108;&#105;&#110;&#046;&#099;&#111;&#109;</a>.</p>
-	<p class="callout"><small>Please be sure to mention the name of this plugin in the email subject or message.</small></p>
+	<p class="callout">Please be sure to mention the name of this plugin in the email subject or message.</p>
 </div>

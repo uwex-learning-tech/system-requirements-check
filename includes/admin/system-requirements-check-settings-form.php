@@ -1,4 +1,4 @@
-<div class="settings-box">
+<div class="settings_box">
 <form method="post" action="options.php">
 
 	<?php settings_fields($this->settings_group); ?>
@@ -11,10 +11,10 @@
 		}
 	?>
 	
-	<div id="system-requirements-check-form">
+	<div class="settings_form">
 		<h4>Operating Systems</h4>
 		
-		<p>Which operating systems to check for?</p>
+		<p>Select the minimum operating systems required.</p>
 		
 		<label class="src-cb"><input type="checkbox" name="windows_vista" value="1" <?php checked('1', get_option('windows_vista')); ?> />Windows Vista </label>
 		
@@ -26,11 +26,11 @@
 		
 		<label class="src-cb"><input type="checkbox" name="mac" value="1" <?php checked('1', get_option('mac')); ?> />Mac OS X </label>
 		
-		<p class="callout info"><small>Windows XP and older will not be supported.</small></p>
+		<p class="callout info">Windows XP and older will not be supported.</p>
 		
 		<h4>Web Browsers</h4>
 		
-		<p>Enter the <strong>minimum</strong> required version number for each web browser.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</small></p>
+		<p>Enter the <strong>minimum</strong> required version number for each web browser.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</small></p>
 		
 		<label class="fixed-width" for="settings-ie">Internet Explorer</label>
 		<input type="text" id="settings-ie" name="ie" value="<?php esc_attr_e(get_option('ie')); ?>" />
@@ -49,16 +49,16 @@
 		
 		<h4>Java Runtime Environment (JRE)</h4>
 		
-		<p>Enter the <strong>minimum</strong> required version number of the JRE.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked. Version number can be entered as <code>x.x</code> or <code>x.x.x</code>.</small></p>
+		<p>Enter the <strong>minimum</strong> required version number of the JRE.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x.x</code> or <code>x.x.x</code>.</small></p>
 		
 		<label for="settings-jre">Version </label>
 		<input type="text" id="settings-jre" name="jre" value="<?php esc_attr_e(get_option('jre')); ?>" />
 		
-		<p class="callout warning"><strong>Note:</strong> <small>Java Runtime Environment (JRE) version number is a bit different than other version number. Java 7 Update 51, for example, does not means the version number is <code>7.x.x</code>. The version number is actually <code>1.7.0_51</code> and should be entered as such in the text box above.</small></p>
+		<p class="callout warning"><strong>Note:</strong> Java Runtime Environment (JRE) version numbering system is different than the usual version numbering system. For instance, Java 7 Update 51 does not means the version number is <code>7.x.x</code>. The version number is actually <code>1.<strong><em>7</em></strong>.0_<strong><em>51</em></strong></code> and should be entered as such in the text box above.</p>
 		
 		<h4>Adobe Flash Player</h4>
 		
-		<p>Enter the <strong>minimum</strong> required version number of the Adobe Flash Player.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</small></p>
+		<p>Enter the <strong>minimum</strong> required version number of the Adobe Flash Player.<br /><small>If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</small></p>
 		
 		<label id="settings-flash">Version </label>
 		<input type="text" id="settings-flash" name="flash" value="<?php esc_attr_e(get_option('flash')); ?>" />
@@ -69,7 +69,7 @@
 		<h4>JavaScript</h4>
 		<label>Check for JavaScript? <input type="checkbox" name="js" value="1" <?php checked('1', get_option('js')); ?> /></label>
         
-        <p class="callout danger"><strong>Important:</strong> <small>Java Runtime Environment (JRE), cookie, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</small></p>
+        <p class="callout danger"><strong>Important:</strong> Java Runtime Environment (JRE), cookie, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</p>
         
 	</div>
 	

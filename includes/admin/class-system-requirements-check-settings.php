@@ -137,11 +137,14 @@ class System_Requirements_Check_Settings {
 			
 			<div class="src-wrap">
 			
-				<?php
-					include_once(sprintf("%s",'system-requirements-check-settings-form.php'));
-					include_once(sprintf("%s",'system-requirements-check-settings-donation.php'));
-					include_once(sprintf("%s",'system-requirements-check-settings-todos.php'));
-				?>
+				<?php include_once(sprintf("%s",'system-requirements-check-settings-form.php')); ?>
+				
+				<div class="side">
+    				<?php
+    					include_once(sprintf("%s",'system-requirements-check-settings-donation.php'));
+    					include_once(sprintf("%s",'system-requirements-check-settings-todos.php'));
+    				?>
+				</div>
 				
 			</div>
 		</div>

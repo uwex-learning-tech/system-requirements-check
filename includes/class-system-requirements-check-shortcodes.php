@@ -48,20 +48,15 @@ class System_Requirements_Check_Shortcode {
 						 '/safari/'	=> prep(get_option('safari')),
 						 '/opera/'	=> prep(get_option('opera'))
 		 				);
-		 				
-		$jre = prep(get_option('jre'));
-		$cookie	= prep(get_option('cookie'));
-		$js = prep(get_option('js'));
-		$flash = prep(get_option('flash'));
-		
+
 		$osCallout = $this->checkOS($os,$system);
-		$broCallout = $this->checkBro($browser,$system);
-		$javaCallout = $this->checkJAVA($jre,$system);
-		$jsCallout = ($js == 1) ? $system->getJS() : '';
-		$cookieCallout = ($cookie == 1) ? $system->getCookie() : '';
-		$flashCallout = $this->checkFlash($flash,$system);
+		$browserCallout = $this->checkBrowser($browser,$system);
+		$jsCallout = $this->checkJS();
+		$cookieCallout = $this->checkCookies();
+		$javaCallout = $this->checkJava();
+		$flashCallout = $this->checkFlash();
 		
-		return $osCallout . $broCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout;
+		return '<div class="system_req_check">' . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout . '</div>';
 		 
 	 }
 	 
@@ -87,14 +82,14 @@ class System_Requirements_Check_Shortcode {
 		 }
 		 
 		 if ($found) {
-			 return '<div class="system_req_check callout success"><p><span class="icon-thumbsup big"></span> <strong>' . $os->getOS() . '</strong> - Your operating system met the requirement.</p></div>';
+			 return '<div class="callout success"><p><span class="icon-thumbsup big"></span><strong>' . $os->getOS() . '</strong> - Your operating system met the requirement.</p></div>';
 		 } else {
-			 return '<div class="system_req_check callout danger"><p><span class="icon-danger big"></span> <strong>Your operating system does not meet the requirement!</strong></p><p>Recommend operating systems: ' . $this->recommendedOS() . '</p></div>';
+			 return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommend operating systems: ' . $this->recommendOS() . '</p></div>';
 		 }
 		 
 	 }
 	 
-	 public function recommendedOS() {
+	 public function recommendOS() {
 
         $result = array();
         $os = '';
@@ -128,14 +123,14 @@ class System_Requirements_Check_Shortcode {
 	 }
 	 
 	 /**
-	  * checkBro function
+	  * checkBrowser function
 	  *
 	  * @access protected
 	  * @param mixed $args
 	  * @return string
 	  *
 	  */
-	 public function checkBro($arr,$os) {
+	 public function checkBrowser($arr,$os) {
 		 
 		 $found = false;
 		 $correctVersion = false;
@@ -198,18 +193,18 @@ class System_Requirements_Check_Shortcode {
 		 if ($found) {
 		    
 		    if ($correctVersion) {
-    		    return '<div class="system_req_check callout success"><p><span class="icon-thumbsup big"></span><strong>' . $browser . ' ('.$version.')' . '</strong> - Your web browser met the requirement.</p></div>';
+    		    return '<div class="callout success"><p><span class="icon-thumbsup big"></span><strong>' . $browser . ' ('.$version.')' . '</strong> - Your web browser met the requirement.</p></div>';
 		    } else {
-    		    return '<div class="system_req_check callout warning"><p><span class="icon-warning big"></span><strong>' . $browser . ' (' . $clientBrowser[1] . ') - <span class="warning">UPDATE REQUIRED</span></strong></p><p>Your web browser browser is outdated. Please update ' . $browser . ' to version <strong>' .$version.' or greater</strong>.</p></div>';
+    		    return '<div class="callout warning"><p><span class="icon-warning big"></span><strong>' . $browser . ' (' . $clientBrowser[1] . ') - <span class="warning">UPDATE REQUIRED</span></strong></p><p>Your web browser browser is outdated. Please update ' . $browser . ' to version <strong>' .$version.' or greater</strong>.</p></div>';
 		    }
 			 
 		 } else {
-			 return '<div class="system_req_check callout danger"><p><span class="icon-danger big"></span><strong>Your web browser is not supported!</strong></p><p>Please try using any of the following web browsers:'. $this->recommenedBrowser() .'</p></div>';
+			 return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your web browser is not supported!</strong></p><p>Please try using any of the following web browsers:'. $this->recommendBrowser() .'</p></div>';
 		 }
 		 
 	 }
 	 
-	 public function recommenedBrowser() {
+	 public function recommendBrowser() {
 
         $result = array();
         $bro = '';
@@ -242,30 +237,88 @@ class System_Requirements_Check_Shortcode {
     	 
 	 }
 	 
-	 public function checkJAVA($ver,$sys) {
-	    if ($ver <= 0) {
-    	    return null;
-	    }
-	    return $sys->getJAVA($ver);
-	 }
+    /**
+    * checkJS function
+    *
+    * @access public
+    * @param none
+    * @return string
+    *
+    */
+    public function checkJS() {
+    
+        $js = prep(get_option('js'));
+    
+        if ($js == 0) return '';
+    
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJS.js"></script><noscript><div class="callout danger"><p><span class="icon-danger big"></span><strong>JavaScript is disabled!</strong> - Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+    
+    }
+    
+    /**
+    * checkCookies function
+    *
+    * @access public
+    * @param none
+    * @return string
+    *
+    */
+    public function checkCookies() {
+    
+        $cookies = prep(get_option('cookie'));
+    
+        if ($cookies == 0) return '';
+    
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+    
+    }
 	 
-	 public function checkFlash($ver, $sys) {
-    	 if ($ver <= 0) {
-    	    return null;
-	    }
-	    return $sys->getFlash($ver);
-	 }
+    /**
+    * checkJava function
+    *
+    * @access public
+    * @param none
+    * @return string
+    *
+    */
+    public function checkJava() {
+    
+        $jre = prep(get_option('jre'));
+        
+        if ($jre <= 0) return '';
+        
+        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+    
+    }
+	 
+    /**
+    * checkFlash function
+    *
+    * @access public
+    * @param none
+    * @return string
+    *
+    */
+    public function checkFlash() {
+    
+        $flash = prep(get_option('flash'));
+    
+        if ($flash <= 0) return '';
+    
+        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+    
+    }
 	 
 	 
-	 /**
-	 * Register and enqueue scripts and css
-	 */
-	public function frontend_scripts() {
-		wp_enqueue_style('system-requirements-check-frontend', '' . SYSTEM_REQ_URL . '/assets/css/system-requirements-check-frontend.css');
-		
-	}
-	 
-	
+    /**
+    * Register and enqueue scripts and css
+    */
+    public function frontend_scripts() {
+    
+        wp_enqueue_style('system-requirements-check-frontend', '' . SYSTEM_REQ_URL . '/assets/css/system-requirements-check-frontend.css');
+    
+    }
+
 } // end class System_Requirements_Check_Shortcode
 
 new System_Requirements_Check_Shortcode();
