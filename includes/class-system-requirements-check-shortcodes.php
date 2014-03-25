@@ -82,7 +82,7 @@ class System_Requirements_Check_Shortcode {
 		 }
 		 
 		 if ($found) {
-			 return '<div class="callout success"><p><span class="icon-thumbsup big"></span><strong>' . $os->getOS() . '</strong> - Your operating system met the requirement.</p></div>';
+			 return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $os->getOS() . '</strong> - Your operating system met the requirement.</p></div>';
 		 } else {
 			 return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommend operating systems: ' . $this->recommendOS() . '</p></div>';
 		 }
@@ -95,30 +95,30 @@ class System_Requirements_Check_Shortcode {
         $os = '';
         
         if (prep(get_option('windows_vista')) == '1') {
-            $result[] = 'Windows Vista';
+            $result[] = '<span class="icon-windows big"></span>Windows Vista';
         }
         
         if (prep(get_option('windows_7')) == '1') {
-            $result[] = 'Windows 7';
+            $result[] = '<span class="icon-windows big"></span>Windows 7';
         }
         
         if (prep(get_option('windows_8')) == '1') {
-            $result[] = 'Windows 8';
+            $result[] = '<span class="icon-windows8 big"></span>Windows 8';
         }
         
         if (prep(get_option('windows_81')) == '1') {
-            $result[] = 'Windows 8.1';
+            $result[] = '<span class="icon-windows8 big"></span>Windows 8.1';
         }
         
         if (prep(get_option('mac')) == '1') {
-            $result[] = 'Mac OS X';
+            $result[] = '<span class="icon-apple big"></span>Mac OS X';
         }
         
         for ($i = 0; $i < count($result); $i++) {
             $os .= '<li>' . $result[$i] . '</li>';
         }
         
-        return '<ul>' . $os .'</ul>';
+        return '<ul class="os">' . $os .'</ul>';
     	 
 	 }
 	 
@@ -151,19 +151,19 @@ class System_Requirements_Check_Shortcode {
                 switch($browser) {
                     case 'trident':
                     case 'msie':
-                    $browser = 'Microsoft Internet Explorer';
+                    $browser = '<span class="icon-ie big"></span>Microsoft Internet Explorer';
                     break;
                     case 'firefox':
-                    $browser = 'Mozilla Firefox';
+                    $browser = '<span class="icon-firefox big"></span>Mozilla Firefox';
                     break;
                     case 'chrome':
-                    $browser = 'Google Chrome';
+                    $browser = '<span class="icon-chrome big"></span>Google Chrome';
                     break;
                     case 'opera':
-                    $browser = 'Opera';
+                    $browser = '<span class="icon-opera big"></span>Opera';
                     break;
                     case 'safari':
-                    $browser = 'Apple Safari';
+                    $browser = '<span class="icon-safari big"></span>Apple Safari';
                     break;
                     default:
                     $browser = 'Unsupported Web Browser';
@@ -193,7 +193,7 @@ class System_Requirements_Check_Shortcode {
 		 if ($found) {
 		    
 		    if ($correctVersion) {
-    		    return '<div class="callout success"><p><span class="icon-thumbsup big"></span><strong>' . $browser . ' ('.$version.')' . '</strong> - Your web browser met the requirement.</p></div>';
+    		    return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $browser . ' ('.$version.')' . '</strong> - Your web browser met the requirement.</p></div>';
 		    } else {
     		    return '<div class="callout warning"><p><span class="icon-warning big"></span><strong>' . $browser . ' (' . $clientBrowser[1] . ') - <span class="warning">UPDATE REQUIRED</span></strong></p><p>Your web browser browser is outdated. Please update ' . $browser . ' to version <strong>' .$version.' or greater</strong>.</p></div>';
 		    }
@@ -210,30 +210,30 @@ class System_Requirements_Check_Shortcode {
         $bro = '';
         
         if (prep(get_option('ie')) >= '1') {
-            $result[] = '<span class="icon-link"></span><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Internet Explorer</a> version '. prep(get_option('ie')) .' or greater';
+            $result[] = '<span class="icon-ie big"></span><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Internet Explorer</a><span class="icon-link"></span> <small>(version '. prep(get_option('ie')) .'+)</small>';
         }
         
         if (prep(get_option('firefox')) >= '1') {
-            $result[] = '<span class="icon-link"></span><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a> version '. prep(get_option('firefox')) .' or greater';
+            $result[] = '<span class="icon-firefox big"></span><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a><span class="icon-link"></span> <small>(version '. prep(get_option('firefox')) .'+)</small>';
         }
         
         if (prep(get_option('chrome')) >= '1') {
-            $result[] = '<span class="icon-link"></span><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a> version '. prep(get_option('chrome')) .' or greater';
+            $result[] = '<span class="icon-chrome big"></span><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a><span class="icon-link"></span> <small>(version '. prep(get_option('chrome')) .'+)</small>';
         }
         
         if (prep(get_option('opera')) >= '1') {
-            $result[] = '<span class="icon-link"></span><a href="http://www.opera.com/" target="_blank">Opera</a> version '. prep(get_option('opera')) .' or greater';
+            $result[] = '<span class="icon-opera big"></span><a href="http://www.opera.com/" target="_blank">Opera</a><span class="icon-link"></span> <small>(version '. prep(get_option('opera')) .'+)</small>';
         }
         
         if (prep(get_option('safari')) >= '1') {
-            $result[] = '<span class="icon-link"></span><a href="https://www.apple.com/safari/" target="_blank">Apple Safari</a> version '. prep(get_option('safari')) .' or greater';
+            $result[] = '<span class="icon-safari big"></span><a href="https://www.apple.com/safari/" target="_blank">Apple Safari</a><span class="icon-link"></span> <small>(version '. prep(get_option('safari')) .'+)</small>';
         }
         
         for ($i = 0; $i < count($result); $i++) {
             $bro .= '<li>' . $result[$i] . '</li>';
         }
         
-        return '<ul>' . $bro .'</ul>';
+        return '<ul class="browser">' . $bro .'</ul>';
     	 
 	 }
 	 
@@ -269,7 +269,7 @@ class System_Requirements_Check_Shortcode {
     
         if ($cookies == 0) return '';
     
-        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
     
     }
 	 
@@ -287,7 +287,7 @@ class System_Requirements_Check_Shortcode {
         
         if ($jre <= 0) return '';
         
-        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
     
     }
 	 
@@ -305,7 +305,7 @@ class System_Requirements_Check_Shortcode {
     
         if ($flash <= 0) return '';
     
-        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-warning big"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
+        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <span class="icon-link"></span><a href="http://enable-javascript.com/" target="_blank">enable</a> JavaScript!</p></div></noscript>';
     
     }
 	 

@@ -16,11 +16,11 @@ class System_Requirements_Check_System {
     
         $this->agent = strtolower($_SERVER['HTTP_USER_AGENT']);
         
-        $this->os_array = array('/windows nt 6.3/i'     =>  'Windows 8.1',
-                                '/windows nt 6.2/i'     =>  'Windows 8',
-                                '/windows nt 6.1/i'     =>  'Windows 7',
-                                '/windows nt 6.0/i'     =>  'Windows Vista',
-                                '/macintosh|mac os x/i' =>  'Mac OS X'
+        $this->os_array = array('/windows nt 6.3/i'     =>  '<span class="icon-windows8 big"></span>Windows 8.1',
+                                '/windows nt 6.2/i'     =>  '<span class="icon-windows8 big"></span>Windows 8',
+                                '/windows nt 6.1/i'     =>  '<span class="icon-windows big"></span>Windows 7',
+                                '/windows nt 6.0/i'     =>  '<span class="icon-windows big"></span>Windows Vista',
+                                '/macintosh|mac os x/i' =>  '<span class="icon-apple big"></span>Mac OS X'
                                 );
                                 
         $this->bro_array = array('firefox','msie', 'trident', 'opera','chrome','safari');

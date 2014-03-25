@@ -1,1 +1,1 @@
-document.write("<div class=\"callout success\"><p><span class=\"icon-thumbsup big\"></span><strong>JavaScript is enabled!</strong></p></div>");
+document.write("<div class=\"callout success\"><p><span class=\"icon-checkmark big\"></span><strong>JavaScript is enabled!</strong></p></div>");

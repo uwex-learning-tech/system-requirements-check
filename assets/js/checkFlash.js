@@ -8,7 +8,7 @@ if (installedVersion === undefined || installedVersion === "0.0.0") {
 
 } else if (checkedVersion <= installedVersion) {
 
-    document.write("<div class=\"callout success\"><p><span class=\"icon-thumbsup big\"></span><strong>Adobe Flash Player ("+installedVersion+") is enabled!</strong></p></div>");
+    document.write("<div class=\"callout success\"><p><span class=\"icon-checkmark big\"></span><strong>Adobe Flash Player ("+installedVersion+") is enabled!</strong></p></div>");
 
 } else {
 

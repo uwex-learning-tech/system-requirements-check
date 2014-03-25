@@ -7,7 +7,7 @@ if (installedVersion === undefined || installedVersion.length === 0) {
     
 } else if (installedVersion[0] >= checkVersion.toString()) {
 
-    document.write("<div class=\"callout success\"><p><span class=\"icon-thumbsup big\"></span><strong>Java ("+installedVersion[0]+") is enabled!</strong></p></div>");
+    document.write("<div class=\"callout success\"><p><span class=\"icon-checkmark big\"></span><strong>Java ("+installedVersion[0]+") is enabled!</strong></p></div>");
     
 } else {
 
