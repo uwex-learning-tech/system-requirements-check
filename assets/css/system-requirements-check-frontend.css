@@ -38,12 +38,12 @@
 .system_req_check .callout ul.os li {
     display: inline-block;
     margin: 0;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 40px;
 }
 .system_req_check .callout ul.browser li {
     display: block;
     margin: 0 0 16px 0;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 35px;
 }
 .system_req_check .callout ul.browser li:last-child {
     margin: 0;

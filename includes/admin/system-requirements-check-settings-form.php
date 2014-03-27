@@ -1,4 +1,7 @@
 <div class="settings_box">
+
+<p class="callout info"><strong>Usage:</strong> place the shortcode, <code>[system_requirements_check]</code> on posts or pages where the result will be displayed.</p>
+
 <form method="post" action="options.php">
 
 	<?php settings_fields($this->settings_group); ?>

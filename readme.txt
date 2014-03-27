@@ -1,8 +1,8 @@
 === Plugin Name ===
 Contributors: eslin87
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T452FJN25TWKG
-Tags: cookie, JRE, os, operating, system, flash, requirements, check, browser, javascript
-Requires at least: 3.5
+Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript
+Requires at least: 3.0
 Tested up to: 3.8
 Stable tag: 0.1.0
 License: GPLv2 or later
@@ -39,7 +39,9 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 == Screenshots ==
 
 1. The settings page
-2. The result page
+2. The all-pass result
+3. Result with warnings
+4. What the requirement not meet look like
 
 == Changelog ==
 
