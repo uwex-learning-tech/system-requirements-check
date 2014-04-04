@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,10 +45,9 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 
 == Changelog ==
 
+= 0.1.1 =
+* Fixed some grammars
+* Listed preferred OS and browsers under passed checks
+
 = 0.1.0 =
 * First initial quick release
-
-== Upgrade Notice ==
-
-= 0.1.0 =
-First release. You’ll need it.

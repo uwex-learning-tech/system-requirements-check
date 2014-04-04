@@ -3,7 +3,7 @@
  * Plugin Name: System Requirements Check
  * Plugin URI: http://www.ethanslin.com/plugin/wordpress/system_requirements_check/
  * Description: A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code  to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Author: Ethan Lin
  * Author URI: http://www.ethanslin.com
  * License: GPL2

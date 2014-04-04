@@ -66,7 +66,8 @@ class System_Requirements_Check_Shortcode {
                            '/macintosh|mac os x/i' => prep(get_option('mac'))
                           );
         $agent = $GLOBALS['system_to_check']->getAgent();    
-        $os = '';        
+        $os = '';
+        $icon = '';     
         $found = false;
         
         foreach($osToCheck as $key => $value) {
@@ -75,19 +76,24 @@ class System_Requirements_Check_Shortcode {
             
             switch($key) {
                 case '/windows nt 6.0/i':
-                $os = '<span class="icon-windows big"></span>Windows Vista';
+                $icon = '<span class="icon-windows big"></span>';
+                $os = 'Windows Vista';
                 break;
                 case '/windows nt 6.1/i':
-                $os = '<span class="icon-windows big"></span>Windows 7';
+                $icon = '<span class="icon-windows big"></span>';
+                $os = 'Windows 7';
                 break;
                 case '/windows nt 6.2/i':
-                $os = '<span class="icon-windows8 big"></span>Windows 8';
+                $icon = '<span class="icon-windows8 big"></span>';
+                $os = 'Windows 8';
                 break;
                 case '/windows nt 6.3/i':
-                $os = '<span class="icon-windows8 big"></span>Windows 8.1';
+                $icon = '<span class="icon-windows8 big"></span>';
+                $os = 'Windows 8.1';
                 break;
                 case '/macintosh|mac os x/i':
-                $os = '<span class="icon-apple big"></span>Mac OS X';
+                $icon = '<span class="icon-apple big"></span>';
+                $os = 'Mac OS X';
                 break;
             }
             
@@ -100,11 +106,11 @@ class System_Requirements_Check_Shortcode {
         
         if ($found) {
         
-            return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $os . '</strong></p></div>';
+            return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $icon . $os . '</strong></p>' . $this->recommendOS(false,$os) . '</div>';
         
         } else {
         
-            return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommend operating systems: ' . $this->recommendOS() . '</p></div>';
+            return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommended operating systems:' . $this->recommendOS(true) . '</p></div>';
         
         }
     
@@ -117,30 +123,59 @@ class System_Requirements_Check_Shortcode {
      * @return string
      *
      */ 
-    public function recommendOS() {
+    public function recommendOS($i=false, $system='') {
     
         $result = array();
         $os = '';
-    
-        if (prep(get_option('windows_vista')) == '1') {
-            $result[] = '<span class="icon-windows big"></span>Windows Vista';
+        $ico = ($i) ? "big" : "";
+        
+        if ($i) {
+        
+            if (prep(get_option('windows_vista')) == '1') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
+            }
+            
+            if (prep(get_option('windows_7')) == '1') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows 7';
+            }
+            
+            if (prep(get_option('windows_8')) == '1') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8';
+            }
+            
+            if (prep(get_option('windows_81')) == '1') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
+            }
+            
+            if (prep(get_option('mac')) == '1') {
+                $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+            }
+            
+        } else {
+        
+            if (prep(get_option('windows_vista')) == '1' && $system != 'Windows Vista') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
+            }
+            
+            if (prep(get_option('windows_7')) == '1' && $system != 'Windows 7') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows 7';
+            }
+            
+            if (prep(get_option('windows_8')) == '1' && $system != 'Windows 8') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8';
+            }
+            
+            if (prep(get_option('windows_81')) == '1' && $system != 'Windows 8.1') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
+            }
+            
+            if (prep(get_option('mac')) == '1' && $system != 'Mac OS X') {
+                $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+            }
+            
         }
         
-        if (prep(get_option('windows_7')) == '1') {
-            $result[] = '<span class="icon-windows big"></span>Windows 7';
-        }
         
-        if (prep(get_option('windows_8')) == '1') {
-            $result[] = '<span class="icon-windows8 big"></span>Windows 8';
-        }
-        
-        if (prep(get_option('windows_81')) == '1') {
-            $result[] = '<span class="icon-windows8 big"></span>Windows 8.1';
-        }
-        
-        if (prep(get_option('mac')) == '1') {
-            $result[] = '<span class="icon-apple big"></span>Mac OS X';
-        }
         
         for ($i = 0; $i < count($result); $i++) {
             $os .= '<li>' . $result[$i] . '</li>';
@@ -187,15 +222,15 @@ class System_Requirements_Check_Shortcode {
                     case 'trident':
                     case 'msie':
                     $icon = '<span class="icon-ie big"></span>';
-                    $browser = 'Microsoft Internet Explorer';
+                    $browser = 'Internet Explorer';
                     break;
                     case 'firefox':
                     $icon = '<span class="icon-firefox big"></span>';
-                    $browser = 'Mozilla Firefox';
+                    $browser = 'Firefox';
                     break;
                     case 'chrome':
                     $icon = '<span class="icon-chrome big"></span>';
-                    $browser = 'Google Chrome';
+                    $browser = 'Chrome';
                     break;
                     case 'opera':
                     $icon = '<span class="icon-opera big"></span>';
@@ -203,7 +238,7 @@ class System_Requirements_Check_Shortcode {
                     break;
                     case 'safari':
                     $icon = '<span class="icon-safari big"></span>';
-                    $browser = 'Apple Safari';
+                    $browser = 'Safari';
                     break;
                     default:
                     $browser = 'Unsupported Web Browser';
@@ -239,7 +274,7 @@ class System_Requirements_Check_Shortcode {
         
             if ($correctVersion) {
             
-                return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $icon . $browser . ' ('.$version.')' . '</strong></p></div>';
+                return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $icon . $browser . ' ('.$version.')' . '</strong></p>' . $this->recommendBrowser(false,$browser) . '</div>';
                 
             } else {
             
@@ -262,36 +297,65 @@ class System_Requirements_Check_Shortcode {
      * @return string
      *
      */
-    public function recommendBrowser() {
+    public function recommendBrowser($i=false, $browser='') {
     
         $result = array();
-        $bro = '';
+        $browsers = '';
+        $ico = ($i) ? "big" : "";
         
-        if (prep(get_option('ie')) >= '1') {
-            $result[] = '<span class="icon-ie big"></span><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Internet Explorer</a><span class="icon-link"></span> <small>(version '. prep(get_option('ie')) .'+)</small>';
+        if ($i) {
+            
+            if (prep(get_option('ie')) >= '1') {
+                $result[] = '<span class="icon-ie '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a><span class="icon-link"></span> <small>(version '. prep(get_option('ie')) .'+)</small>';
+            }
+            
+            if (prep(get_option('firefox')) >= '1') {
+                $result[] = '<span class="icon-firefox '.$ico.'"></span> <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a><span class="icon-link"></span> <small>(version '. prep(get_option('firefox')) .'+)</small>';
+            }
+            
+            if (prep(get_option('chrome')) >= '1') {
+                $result[] = '<span class="icon-chrome '.$ico.'"></span> <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Chrome</a><span class="icon-link"></span> <small>(version '. prep(get_option('chrome')) .'+)</small>';
+            }
+            
+            if (prep(get_option('opera')) >= '1') {
+                $result[] = '<span class="icon-opera '.$ico.'"></span> <a href="http://www.opera.com/" target="_blank">Opera</a><span class="icon-link"></span> <small>(version '. prep(get_option('opera')) .'+)</small>';
+            }
+            
+            if (prep(get_option('safari')) >= '1') {
+                $result[] = '<span class="icon-safari '.$ico.'"></span> <a href="https://www.apple.com/safari/" target="_blank">Safari</a><span class="icon-link"></span> <small>(version '. prep(get_option('safari')) .'+)</small>';
+            }
+            
+        } else {
+            
+            if (prep(get_option('ie')) >= '1' && $browser != 'Internet Explorer') {
+                $result[] = '<span class="icon-ie '.$ico.'"></span> Internet Explorer '. prep(get_option('ie')) .'+';
+            }
+            
+            if (prep(get_option('firefox')) >= '1' && $browser != 'Firefox') {
+                $result[] = '<span class="icon-firefox '.$ico.'"></span> Firefox '. prep(get_option('firefox')) .'+';
+            }
+            
+            if (prep(get_option('chrome')) >= '1' && $browser != 'Chrome') {
+                $result[] = '<span class="icon-chrome '.$ico.'"></span> Chrome '. prep(get_option('chrome')) .'+';
+            }
+            
+            if (prep(get_option('opera')) >= '1' && $browser != 'Opera') {
+                $result[] = '<span class="icon-opera '.$ico.'"></span> Opera '. prep(get_option('opera')) .'+';
+            }
+            
+            if (prep(get_option('safari')) >= '1' && $browser != 'Safari') {
+                $result[] = '<span class="icon-safari '.$ico.'"></span> Safari '. prep(get_option('safari')) .'+';
+            }
+            
         }
         
-        if (prep(get_option('firefox')) >= '1') {
-            $result[] = '<span class="icon-firefox big"></span><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a><span class="icon-link"></span> <small>(version '. prep(get_option('firefox')) .'+)</small>';
-        }
         
-        if (prep(get_option('chrome')) >= '1') {
-            $result[] = '<span class="icon-chrome big"></span><a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a><span class="icon-link"></span> <small>(version '. prep(get_option('chrome')) .'+)</small>';
-        }
-        
-        if (prep(get_option('opera')) >= '1') {
-            $result[] = '<span class="icon-opera big"></span><a href="http://www.opera.com/" target="_blank">Opera</a><span class="icon-link"></span> <small>(version '. prep(get_option('opera')) .'+)</small>';
-        }
-        
-        if (prep(get_option('safari')) >= '1') {
-            $result[] = '<span class="icon-safari big"></span><a href="https://www.apple.com/safari/" target="_blank">Apple Safari</a><span class="icon-link"></span> <small>(version '. prep(get_option('safari')) .'+)</small>';
-        }
         
         for ($i = 0; $i < count($result); $i++) {
-            $bro .= '<li>' . $result[$i] . '</li>';
+            $browsers .= '<li>' . $result[$i] . '</li>';
         }
         
-        return '<ul class="browser">' . $bro .'</ul>';
+        return '<ul class="browser">' . $browsers .'</ul>';
     
     }
 	 

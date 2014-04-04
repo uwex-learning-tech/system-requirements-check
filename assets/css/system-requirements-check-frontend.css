@@ -5,10 +5,25 @@
 	padding: 3px 6px;
 	background-color: #f8f8f8;
 	box-sizing: border-box;
+	margin-bottom: 5px;
 }
 .system_req_check .callout.success {
 	border-color: #56cd00;
-	background-color: #f1ffe7;
+	background-color: #caffa4;
+}
+.system_req_check .callout.success ul.os,
+.system_req_check .callout.success ul.browser {
+    padding: 0;
+    margin: 0;
+    border-top:1px solid #94c96d;
+}
+.system_req_check .callout.success ul.os li,
+.system_req_check .callout.success ul.browser li {
+	display: inline;
+	padding: 0;
+	margin: 0 10px 0 0;
+	color:#94c96d;
+	/* font-size: smaller; */
 }
 .system_req_check .callout.info {
 	border-color: #00aeff;

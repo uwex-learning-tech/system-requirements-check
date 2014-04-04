@@ -11,6 +11,6 @@ if (installedVersion === undefined || installedVersion.length === 0) {
     
 } else {
 
-    document.write("<div class=\"callout warning\"><p><span class=\"icon-warning big\"></span><span class=\"icon-java big\"></span><strong>Java ("+installedVersion+") is outdated! - <span class=\"warning\">UPDATE REQUIRED</span></strong></p><p>Java version <strong>"+checkVersion+" or greater</strong> is required. Please update <span class=\"icon-link\"></span><a href=\"http://java.com/en/download/help/index_installing.xml\" target=\"_blank\">Java</a>.<br /><small><strong>Note:</strong> Java 7 (version 1.7.0 or greater) is not supported by 32-bit Google Chrome.</small></div>");
+    document.write("<div class=\"callout warning\"><p><span class=\"icon-warning big\"></span><span class=\"icon-java big\"></span><strong>Java ("+installedVersion+") is outdated! - <span class=\"warning\">UPDATE REQUIRED</span></strong></p><p>Java version <strong>"+checkVersion+" or greater</strong> is required. Please update <a href=\"http://java.com/en/download/help/index_installing.xml\" target=\"_blank\">Java</a><span class=\"icon-link\"></span>.<br /><small><strong>Note:</strong> Java 7 (version 1.7.0 or greater) is not supported by 32-bit Google Chrome.</small></div>");
     
 }
