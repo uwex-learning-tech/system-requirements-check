@@ -1,0 +1,136 @@
+/* line 8, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap {
+  float: left;
+  clear: both;
+}
+@media (min-width: 1010px) {
+  /* line 8, ../../../scss/system-requirements-check-settings.scss */
+  .src-wrap {
+    width: inherit;
+    float: none;
+  }
+}
+/* line 18, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap h3, .src-wrap h4 {
+  margin: 3px 0;
+  text-transform: uppercase;
+}
+/* line 23, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap h4 {
+  margin: 8px 0;
+}
+/* line 28, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap p {
+  margin: 8px 0;
+}
+/* line 32, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap small {
+  font-style: italic;
+  font-size: smaller;
+  line-height: 1;
+}
+/* line 38, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap code {
+  background-color: transparent;
+  padding: 0;
+  font-weight: normal;
+}
+/* line 45, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box {
+  width: 500px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #fff;
+  float: left;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 3px 0 0 #dbdbdb;
+  -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
+  box-shadow: 0 3px 0 0 #dbdbdb;
+}
+@media (min-width: 1010px) {
+  /* line 45, ../../../scss/system-requirements-check-settings.scss */
+  .src-wrap .settings_box {
+    width: inherit;
+    float: none;
+  }
+}
+/* line 65, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .setting_form label {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+/* line 70, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .setting_form label.fixed-width {
+  width: 70px;
+}
+/* line 74, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .setting_form input[type=text] {
+  width: 50px;
+}
+@media (min-width: 1010px) {
+  /* line 78, ../../../scss/system-requirements-check-settings.scss */
+  .src-wrap .setting_form .src_cb {
+    display: block;
+    width: auto;
+  }
+}
+/* line 88, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .side {
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+}
+@media (min-width: 1010px) {
+  /* line 88, ../../../scss/system-requirements-check-settings.scss */
+  .src-wrap .side {
+    width: inherit;
+    margin-left: 0;
+    float: none;
+  }
+}
+/* line 101, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .side .todos-box, .src-wrap .side .donation-box {
+  background-color: #fff;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 3px 0 0 #dbdbdb;
+  -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
+  box-shadow: 0 3px 0 0 #dbdbdb;
+}
+/* line 109, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .side .todos-box ul, .src-wrap .side .donation-box ul {
+  list-style: disc;
+  padding-left: 25px;
+}
+/* line 123, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .callout {
+  padding: 3px 6px;
+  margin: 8px 0;
+  border-left: solid 4px #dfdfdf;
+  background-color: #f8f8f8;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 131, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .callout.info {
+  border-color: #00aeff;
+}
+/* line 135, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .callout.warning {
+  border-color: #ff9200;
+}
+/* line 139, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .callout.danger {
+  border-color: #ff2700;
+}
+/* line 143, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .callout.success {
+  border-color: #00cc00;
+}

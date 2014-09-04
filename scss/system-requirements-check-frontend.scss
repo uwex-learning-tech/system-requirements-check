@@ -1,0 +1,128 @@
+@import "variables";
+@import "systemrequirementscheckfont";
+@import "compass/css3/box-sizing";
+@import "compass/css3/opacity";
+
+.system_req_check {
+    
+    .callout {
+    
+    	padding: 3px 6px;
+    	margin-bottom: 5px;
+    	border-left: solid 4px $callout-border;
+    	background-color: $callout-bg;
+    	@include box-sizing( "border-box" );
+    	
+    	.warning {
+        	color: #ff8100;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        ul {
+            @extend p;
+        }
+        
+        .os {
+        
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            li {
+                display: inline-block;
+                margin: 0;
+                padding: 0 0 0 40px;
+            }
+            
+        }
+        
+        .browser {
+        
+            @extend .os;
+            
+            li {
+                display: block;
+                margin: 0 0 16px 0;
+                padding: 0 0 0 35px;
+            }
+            
+            li:last-child {
+                margin: 0;
+            }
+            
+        }
+    	
+    }
+    
+    .callout.success {
+    
+    	border-color: $callout-success-border;
+    	background-color: $callout-success-bg;
+    	
+    	.os {
+    	
+        	padding: 0;
+            margin: 5px 0 0 0;
+            /* border-top: 1px solid $callout-success-border; */
+            
+            li {
+                display: inline;
+                padding: 0;
+                margin: 0 10px 0 0;
+                @include opacity( .75 );
+            }
+            
+    	}
+    	
+    	.browser {
+        	@extend .os;
+    	}
+    	
+    }
+    
+    .callout.info {
+    	border-color: $callout-info-border;
+    	background-color: $callout-info-bg;
+    }
+    
+    .callout.warning {
+    	border-color: $callout-warning-border;
+    	background-color: $callout-warning-bg;
+    }
+    
+    .callout.danger {
+    	border-color: $callout-danger-border;
+    	background-color: $callout-danger-bg;
+    }
+    
+    span[class^="icon-"].big {
+        display: inline-block;
+    	font-size: 200%;
+    	vertical-align: bottom;
+    	margin-right: 10px;
+    }
+    
+    span[class*=" icon-"].big {
+        @extend span[class^="icon-"].big;
+    }
+    
+    .green {
+        color: $callout-success-border;
+    }
+    
+    .red {
+        color: $callout-danger-border;
+    }
+    
+    .yellow {
+        color: $callout-warning-border;
+    }
+    
+}
+
+#deployJavaPlugin {
+    display: none;
+}

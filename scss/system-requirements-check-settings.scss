@@ -1,0 +1,147 @@
+@import "variables";
+@import "breakpoint";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/box-sizing";
+
+// settings page wrapper
+.src-wrap {
+    
+    float: left;
+	clear:both;
+	
+	@include breakpoint( $mobile ) {
+        width: inherit;
+		float: none;
+    }
+	
+	h3 {
+    	margin: 3px 0;
+    	text-transform: uppercase;
+	}
+	
+	h4 {
+    	@extend h3;
+    	margin: 8px 0;
+	}
+	
+	p {
+    	margin: 8px 0;
+	}
+	
+	small {
+    	font-style: italic;
+    	font-size: smaller;
+    	line-height: 1;
+	}
+	
+	code {
+    	background-color: transparent;
+        padding: 0;
+        font-weight: normal;
+	}
+	
+	// settings config form
+	.settings_box {
+	
+    	width: 500px;
+    	padding: 5px 10px;
+    	margin-top: 10px;
+    	background-color:#fff;
+    	float:left;
+    	
+    	@include border-radius( 5px );
+        @include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+    	
+    	@include breakpoint( $mobile ) {
+            width: inherit;
+            float: none;
+        }
+    	
+	}
+	
+	.setting_form {
+    	
+    	label {
+        	display: inline-block;
+        	margin: 0 5px 5px 0;
+    	}
+    	
+    	label.fixed-width {
+        	width: 70px;
+    	}
+    	
+    	input[type=text] {
+        	width: 50px;
+    	}
+    	
+    	.src_cb {
+        	@include breakpoint( $mobile ) {
+                display: block;
+                width: auto;
+            }
+    	}
+    	
+	}
+	
+	// settings page sidebar
+	.side {
+	
+    	width:200px;
+    	margin-top: 10px;
+    	margin-left: 10px;
+    	float:left;
+    	
+    	@include breakpoint( $mobile ) {
+            width: inherit;
+            margin-left: 0;
+            float: none;
+        }
+    	
+    	.todos-box {
+    	
+        	background-color: #fff;
+        	padding: 5px 10px;
+        	margin-bottom: 10px;
+        	@include border-radius( 5px );
+        	@include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+        	
+        	ul {
+            	list-style: disc;
+            	padding-left: 25px;
+        	}
+        	
+    	}
+    	
+    	.donation-box {
+        	@extend .todos-box;
+    	}
+    	
+	}
+	
+	// callouts
+	.callout {
+    	padding: 3px 6px;
+    	margin: 8px 0;
+    	border-left: solid 4px $callout-border;
+    	background-color: $callout-bg;
+    	@include box-sizing( "border-box" );
+	}
+	
+	.callout.info {
+    	border-color: $callout-info-border;
+    }
+    
+    .callout.warning {
+    	border-color: $callout-warning-border;
+    }
+    
+    .callout.danger {
+	    border-color: $callout-danger-border;
+    }
+    
+    .callout.success {
+        border-color: $callout-success-border;
+    }
+    
+}

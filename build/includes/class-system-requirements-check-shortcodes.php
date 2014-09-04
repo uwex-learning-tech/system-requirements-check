@@ -106,11 +106,11 @@ class System_Requirements_Check_Shortcode {
         
         if ($found) {
         
-            return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $icon . $os . '</strong></p>' . $this->recommendOS(false,$os) . '</div>';
+            return '<div class="callout success"><p><span class="icon-checkmark big green"></span><strong>' . $icon . $os . '</strong></p>' . $this->recommendOS(false,$os) . '</div>';
         
         } else {
         
-            return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommended operating systems:' . $this->recommendOS(true) . '</p></div>';
+            return '<div class="callout danger"><p><span class="icon-danger big red"></span><strong>Your operating system does not meet the requirement!</strong></p><p>Recommended operating systems:' . $this->recommendOS(true) . '</p></div>';
         
         }
     
@@ -274,17 +274,17 @@ class System_Requirements_Check_Shortcode {
         
             if ($correctVersion) {
             
-                return '<div class="callout success"><p><span class="icon-checkmark big"></span><strong>' . $icon . $browser . ' ('.$version.')' . '</strong></p>' . $this->recommendBrowser(false,$browser) . '</div>';
+                return '<div class="callout success"><p><span class="icon-checkmark big green"></span><strong>' . $icon . $browser . ' ('.$version.')' . '</strong></p>' . $this->recommendBrowser(false,$browser) . '</div>';
                 
             } else {
             
-                return '<div class="callout warning"><p><span class="icon-warning big"></span><strong>' . $icon . $browser . ' (' . $clientBrowser[1] . ') - <span class="warning">UPDATE REQUIRED</span></strong></p><p>Your web browser browser is outdated. Please update <strong>' . $browser . '</strong> to version <strong>' .$version.' or greater</strong>.</p></div>';
+                return '<div class="callout warning"><p><span class="icon-warning big yellow"></span><strong>' . $icon . $browser . ' (' . $clientBrowser[1] . ') - <span class="warning">UPDATE REQUIRED</span></strong></p><p>Your web browser browser is outdated. Please update <strong>' . $browser . '</strong> to version <strong>' .$version.' or greater</strong>.</p></div>';
                 
             }
         
         } else {
         
-            return '<div class="callout danger"><p><span class="icon-danger big"></span><strong>Your web browser is not supported!</strong></p><p>Please try using any of the following web browsers:'. $this->recommendBrowser() .'</p></div>';
+            return '<div class="callout danger"><p><span class="icon-danger big red"></span><strong>Your web browser is not supported!</strong></p><p>Please try using any of the following web browsers:'. $this->recommendBrowser() .'</p></div>';
         
         }
     
@@ -373,7 +373,7 @@ class System_Requirements_Check_Shortcode {
     
         if ($js == 0) return '';
     
-        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJS.js"></script><noscript><div class="callout danger"><p><span class="icon-danger big"></span><span class="icon-javascript big"></span><strong>JavaScript is disabled!</strong> - Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJS.js"></script><noscript><div class="callout danger"><p><span class="icon-danger big red"></span><span class="icon-javascript big"></span><strong>JavaScript is disabled!</strong> - Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
     
     }
     
@@ -391,7 +391,7 @@ class System_Requirements_Check_Shortcode {
     
         if ($cookies == 0) return '';
     
-        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
     
     }
 	 
@@ -409,7 +409,7 @@ class System_Requirements_Check_Shortcode {
         
         if ($jre <= 0) return '';
         
-        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><span class="icon-java big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><span class="icon-java big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
     
     }
 	 
@@ -427,7 +427,7 @@ class System_Requirements_Check_Shortcode {
     
         if ($flash <= 0) return '';
     
-        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
     
     }
 	 
@@ -436,7 +436,10 @@ class System_Requirements_Check_Shortcode {
      * Register and enqueue scripts and css
      */
     public function frontend_scripts() {
-    
+        
+        wp_deregister_script('jquery');
+        wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
+        wp_enqueue_script('jquery');
         wp_enqueue_style('system-requirements-check-frontend', '' . SYSTEM_REQ_URL . '/assets/css/system-requirements-check-frontend.css');
     
     }

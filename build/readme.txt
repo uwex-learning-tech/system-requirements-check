@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: eslin87
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T452FJN25TWKG
-Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript
+Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript, client
 Requires at least: 3.0
-Tested up to: 3.8
-Stable tag: 0.1.1
+Tested up to: 4.0
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Checks for specified version of the operating systems, web browsers, Flash Playe
 
 == Description ==
 
-A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code  to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
+A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
 
 == Installation ==
 
@@ -41,9 +41,13 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 1. The settings page
 2. The all-pass result
 3. Result with warnings
-4. What the requirement not meet look like
+4. What the requirements not met look like
 
 == Changelog ==
+
+= 0.2.0 =
+* Added Windows XP
+* Added Linux OS
 
 = 0.1.1 =
 * Fixed some grammars

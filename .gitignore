@@ -1,0 +1,11 @@
+# ignore codekit config file
+config.codekit
+**/config.codekit
+
+# ingore bower components
+bower_components/
+**/bower_components
+
+# ingore SASS cache hidden directory
+.sass-cache
+**/.sass-cache
