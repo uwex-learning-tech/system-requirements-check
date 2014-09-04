@@ -181,9 +181,8 @@
 .system_req_check .callout.success .os, .system_req_check .callout.success .browser {
   padding: 0;
   margin: 5px 0 0 0;
-  /* border-top: 1px solid $callout-success-border; */
 }
-/* line 71, ../../../scss/system-requirements-check-frontend.scss */
+/* line 70, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .callout.success .os li, .system_req_check .callout.success .browser li {
   display: inline;
   padding: 0;
@@ -191,42 +190,42 @@
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   opacity: 0.75;
 }
-/* line 86, ../../../scss/system-requirements-check-frontend.scss */
+/* line 85, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .callout.info {
   border-color: #00aeff;
   background-color: #e6f7ff;
 }
-/* line 91, ../../../scss/system-requirements-check-frontend.scss */
+/* line 90, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .callout.warning {
   border-color: #ff9200;
   background-color: #fffce7;
 }
-/* line 96, ../../../scss/system-requirements-check-frontend.scss */
+/* line 95, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .callout.danger {
   border-color: #ff2700;
   background-color: #ffe9e6;
 }
-/* line 101, ../../../scss/system-requirements-check-frontend.scss */
+/* line 100, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check span[class^="icon-"].big, .system_req_check span[class*=" icon-"].big {
   display: inline-block;
   font-size: 200%;
   vertical-align: bottom;
   margin-right: 10px;
 }
-/* line 112, ../../../scss/system-requirements-check-frontend.scss */
+/* line 111, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .green {
   color: #00cc00;
 }
-/* line 116, ../../../scss/system-requirements-check-frontend.scss */
+/* line 115, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .red {
   color: #ff2700;
 }
-/* line 120, ../../../scss/system-requirements-check-frontend.scss */
+/* line 119, ../../../scss/system-requirements-check-frontend.scss */
 .system_req_check .yellow {
   color: #ff9200;
 }
 
-/* line 126, ../../../scss/system-requirements-check-frontend.scss */
+/* line 125, ../../../scss/system-requirements-check-frontend.scss */
 #deployJavaPlugin {
   display: none;
 }

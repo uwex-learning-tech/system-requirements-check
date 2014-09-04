@@ -21,7 +21,7 @@ class System_Requirements_Check_System {
     public function __construct() {
     
         $this->agent = strtolower($_SERVER['HTTP_USER_AGENT']);
-        $this->os_array = array('/windows nt 6.3/i', '/windows nt 6.2/i', '/windows nt 6.1/i', '/windows nt 6.0/i', '/macintosh|mac os x/i');      
+        $this->os_array = array('/windows nt 6.3/i', '/windows nt 6.2/i', '/windows nt 6.1/i', '/windows nt 6.0/i', '/windows nt 5.1/i', '/macintosh|mac os x/i');      
         $this->bro_array = array('firefox', 'msie', 'trident', 'opera', 'chrome', 'safari');
                 
     }

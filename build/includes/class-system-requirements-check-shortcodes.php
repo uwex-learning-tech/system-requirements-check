@@ -59,7 +59,9 @@ class System_Requirements_Check_Shortcode {
      */
     public function checkOS() {
     
-        $osToCheck = array('/windows nt 6.0/i'     => prep(get_option('windows_vista')),
+        $osToCheck = array(
+                           '/windows nt 5.1/i'     => prep(get_option('windows_xp')),
+                           '/windows nt 6.0/i'     => prep(get_option('windows_vista')),
                            '/windows nt 6.1/i'     => prep(get_option('windows_7')),
                            '/windows nt 6.2/i'     => prep(get_option('windows_8')),
                            '/windows nt 6.3/i'     => prep(get_option('windows_81')),
@@ -75,6 +77,10 @@ class System_Requirements_Check_Shortcode {
             if (preg_match($key, $agent) && $value == '1') {
             
             switch($key) {
+                case '/windows nt 5.1/i':
+                $icon = '<span class="icon-windows big"></span>';
+                $os = 'Windows XP';
+                break;
                 case '/windows nt 6.0/i':
                 $icon = '<span class="icon-windows big"></span>';
                 $os = 'Windows Vista';
@@ -130,7 +136,11 @@ class System_Requirements_Check_Shortcode {
         $ico = ($i) ? "big" : "";
         
         if ($i) {
-        
+            
+            if (prep(get_option('windows_xp')) == '1') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows XP';
+            }
+            
             if (prep(get_option('windows_vista')) == '1') {
                 $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
             }
@@ -152,7 +162,11 @@ class System_Requirements_Check_Shortcode {
             }
             
         } else {
-        
+            
+            if (prep(get_option('windows_xp')) == '1') {
+                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows XP';
+            }
+            
             if (prep(get_option('windows_vista')) == '1' && $system != 'Windows Vista') {
                 $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
             }
