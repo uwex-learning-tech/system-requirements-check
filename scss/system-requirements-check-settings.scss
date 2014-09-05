@@ -7,122 +7,108 @@
 // settings page wrapper
 .src-wrap {
     
-    float: left;
-	clear:both;
-	
-	@include breakpoint( $mobile ) {
-        width: inherit;
-		float: none;
+    hr {
+        margin: 18px 0 16px;
+        border-style: dotted;
     }
-	
-	h3 {
-    	margin: 3px 0;
-    	text-transform: uppercase;
-	}
-	
-	h4 {
-    	@extend h3;
-    	margin: 8px 0;
-	}
-	
-	p {
-    	margin: 8px 0;
-	}
-	
-	small {
-    	font-style: italic;
-    	font-size: smaller;
-    	line-height: 1;
-	}
-	
-	code {
-    	background-color: transparent;
-        padding: 0;
-        font-weight: normal;
-	}
-	
-	// settings config form
+    
+    hr.thick {
+        border-style: solid;
+        border-color: #ccc;
+    }
+    
+	// settings box
 	.settings_box {
 	
-    	width: 500px;
-    	padding: 5px 10px;
-    	margin-top: 10px;
+    	width: 100%;
+    	padding: 16px 16px 0;
+    	margin-top: 16px;
     	background-color:#fff;
-    	float:left;
     	
     	@include border-radius( 5px );
         @include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
-    	
-    	@include breakpoint( $mobile ) {
-            width: inherit;
-            float: none;
-        }
-    	
-	}
-	
-	.setting_form {
-    	
-    	label {
-        	display: inline-block;
-        	margin: 0 5px 5px 0;
+        @include box-sizing( "border-box" );
+        
+        h3 {
+        	margin: 0;
+        	text-transform: uppercase;
     	}
     	
-    	label.fixed-width {
-        	width: 70px;
+    	h4 {
+        	margin: 16px 0 6px; 
+        	text-transform: uppercase;
     	}
     	
-    	input[type=text] {
-        	width: 50px;
+    	p {
+        	margin: 6px 0 16px;
+        	text-transform: none;
     	}
     	
-    	.src_cb {
-        	@include breakpoint( $mobile ) {
-                display: block;
-                width: auto;
-            }
+    	p:last-child {
+        	margin-bottom: 0;
     	}
     	
-	}
-	
-	// settings page sidebar
-	.side {
-	
-    	width:200px;
-    	margin-top: 10px;
-    	margin-left: 10px;
-    	float:left;
+    	code {
+        	background-color: transparent;
+            padding: 0;
+            font-weight: normal;
+    	}
     	
-    	@include breakpoint( $mobile ) {
-            width: inherit;
-            margin-left: 0;
-            float: none;
-        }
+    	// config form
+    	.settings_form {
     	
-    	.todos-box {
-    	
-        	background-color: #fff;
-        	padding: 5px 10px;
-        	margin-bottom: 10px;
-        	@include border-radius( 5px );
-        	@include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+        	label {
+            	display: inline-block;
+            	margin: 6px 0;
+        	}
         	
-        	ul {
-            	list-style: disc;
-            	padding-left: 25px;
+        	.src-cb {
+            	margin-right: 8px;
+        	}
+        	
+        	label.fixed-width {
+            	width: 110px;
+        	}
+        	
+        	input[type=text] {
+            	width: 50px;
+        	}
+        	
+        	@include breakpoint( max-width $mobile ) {
+            	
+            	.src-cb {
+                	display: block;
+            	}
+            	
         	}
         	
     	}
     	
-    	.donation-box {
-        	@extend .todos-box;
+	}
+	
+	.donation-box {
+	
+    	background-color: #fff;
+    	padding: 16px;
+    	margin-top: 16px;
+    	@include border-radius( 5px );
+    	@include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+    	
+    	p:first-child {
+        	margin-top: 0;
+    	}
+    	
+    	.callout:last-child {
+        	margin-bottom: 0;
     	}
     	
 	}
 	
 	// callouts
 	.callout {
+	
     	padding: 3px 6px;
-    	margin: 8px 0;
+    	margin: 16px 0;
     	border-left: solid 4px $callout-border;
     	background-color: $callout-bg;
     	@include box-sizing( "border-box" );

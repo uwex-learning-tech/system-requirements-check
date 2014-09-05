@@ -1,101 +1,82 @@
-/* line 8, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap {
-  float: left;
-  clear: both;
+/* line 10, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap hr {
+  margin: 18px 0 16px;
+  border-style: dotted;
 }
-@media (min-width: 1010px) {
-  /* line 8, ../../../scss/system-requirements-check-settings.scss */
-  .src-wrap {
-    width: inherit;
-    float: none;
-  }
+/* line 15, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap hr.thick {
+  border-style: solid;
+  border-color: #ccc;
 }
-/* line 18, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap h3, .src-wrap h4 {
-  margin: 3px 0;
-  text-transform: uppercase;
-}
-/* line 23, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap h4 {
-  margin: 8px 0;
-}
-/* line 28, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap p {
-  margin: 8px 0;
+/* line 21, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box {
+  width: 100%;
+  padding: 16px 16px 0;
+  margin-top: 16px;
+  background-color: #fff;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 3px 0 0 #dbdbdb;
+  -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
+  box-shadow: 0 3px 0 0 #dbdbdb;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* line 32, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap small {
-  font-style: italic;
-  font-size: smaller;
-  line-height: 1;
+.src-wrap .settings_box h3 {
+  margin: 0;
+  text-transform: uppercase;
 }
-/* line 38, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap code {
+/* line 37, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box h4 {
+  margin: 16px 0 6px;
+  text-transform: uppercase;
+}
+/* line 42, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box p {
+  margin: 6px 0 16px;
+  text-transform: none;
+}
+/* line 47, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box p:last-child {
+  margin-bottom: 0;
+}
+/* line 51, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box code {
   background-color: transparent;
   padding: 0;
   font-weight: normal;
 }
-/* line 45, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box {
-  width: 500px;
-  padding: 5px 10px;
-  margin-top: 10px;
-  background-color: #fff;
-  float: left;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0 3px 0 0 #dbdbdb;
-  -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
-  box-shadow: 0 3px 0 0 #dbdbdb;
-}
-@media (min-width: 1010px) {
-  /* line 45, ../../../scss/system-requirements-check-settings.scss */
-  .src-wrap .settings_box {
-    width: inherit;
-    float: none;
-  }
+/* line 60, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box .settings_form label {
+  display: inline-block;
+  margin: 6px 0;
 }
 /* line 65, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .setting_form label {
-  display: inline-block;
-  margin: 0 5px 5px 0;
+.src-wrap .settings_box .settings_form .src-cb {
+  margin-right: 8px;
 }
-/* line 70, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .setting_form label.fixed-width {
-  width: 70px;
+/* line 69, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box .settings_form label.fixed-width {
+  width: 110px;
 }
-/* line 74, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .setting_form input[type=text] {
+/* line 73, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .settings_box .settings_form input[type=text] {
   width: 50px;
 }
-@media (min-width: 1010px) {
-  /* line 78, ../../../scss/system-requirements-check-settings.scss */
-  .src-wrap .setting_form .src_cb {
+@media (max-width: 1010px) {
+  /* line 79, ../../../scss/system-requirements-check-settings.scss */
+  .src-wrap .settings_box .settings_form .src-cb {
     display: block;
-    width: auto;
   }
 }
-/* line 88, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .side {
-  width: 200px;
-  margin-top: 10px;
-  margin-left: 10px;
-  float: left;
-}
-@media (min-width: 1010px) {
-  /* line 88, ../../../scss/system-requirements-check-settings.scss */
-  .src-wrap .side {
-    width: inherit;
-    margin-left: 0;
-    float: none;
-  }
-}
-/* line 101, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .side .todos-box, .src-wrap .side .donation-box {
+/* line 89, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .donation-box {
   background-color: #fff;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  padding: 16px;
+  margin-top: 16px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -103,34 +84,37 @@
   -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
   box-shadow: 0 3px 0 0 #dbdbdb;
 }
-/* line 109, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .side .todos-box ul, .src-wrap .side .donation-box ul {
-  list-style: disc;
-  padding-left: 25px;
+/* line 97, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .donation-box p:first-child {
+  margin-top: 0;
 }
-/* line 123, ../../../scss/system-requirements-check-settings.scss */
+/* line 101, ../../../scss/system-requirements-check-settings.scss */
+.src-wrap .donation-box .callout:last-child {
+  margin-bottom: 0;
+}
+/* line 108, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap .callout {
   padding: 3px 6px;
-  margin: 8px 0;
+  margin: 16px 0;
   border-left: solid 4px #dfdfdf;
   background-color: #f8f8f8;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 131, ../../../scss/system-requirements-check-settings.scss */
+/* line 117, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap .callout.info {
   border-color: #00aeff;
 }
-/* line 135, ../../../scss/system-requirements-check-settings.scss */
+/* line 121, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap .callout.warning {
   border-color: #ff9200;
 }
-/* line 139, ../../../scss/system-requirements-check-settings.scss */
+/* line 125, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap .callout.danger {
   border-color: #ff2700;
 }
-/* line 143, ../../../scss/system-requirements-check-settings.scss */
+/* line 129, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap .callout.success {
   border-color: #00cc00;
 }
