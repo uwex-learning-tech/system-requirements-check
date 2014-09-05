@@ -14,7 +14,7 @@ A minimum system requirements plugin that checks for specified version of the op
 
 = 0.2.0 =
 * Added Windows XP
-* Added Linux OS
+* Updated looks and feels
 
 = 0.1.1 =
 * Fixed some grammars

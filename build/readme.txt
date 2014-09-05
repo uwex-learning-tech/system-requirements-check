@@ -47,7 +47,7 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 
 = 0.2.0 =
 * Added Windows XP
-* Added Linux OS
+* Updates looks and feels
 
 = 0.1.1 =
 * Fixed some grammars
