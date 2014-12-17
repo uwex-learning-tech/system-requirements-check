@@ -45,6 +45,10 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 
 == Changelog ==
 
+= 1.0.0 =
+* Tested to be compatible with WordPress version 4.1
+* Taking SSL connections into consideration with requesting script files
+
 = 0.2.0 =
 * Added Windows XP
 * Updates looks and feels
