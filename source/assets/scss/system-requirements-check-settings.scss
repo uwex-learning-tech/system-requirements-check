@@ -26,7 +26,7 @@
     	background-color:#fff;
     	
     	@include border-radius( 5px );
-        @include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+        @include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
         @include box-sizing( "border-box" );
         
         h3 {
@@ -92,7 +92,7 @@
     	padding: 16px;
     	margin-top: 16px;
     	@include border-radius( 5px );
-    	@include single-box-shadow( #dbdbdb, 0, 3px, 0, 0 );
+    	@include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
     	
     	p:first-child {
         	margin-top: 0;

@@ -1,14 +1,9 @@
-/* line 10, ../../../scss/system-requirements-check-settings.scss */
 .src-wrap hr {
   margin: 18px 0 16px;
-  border-style: dotted;
-}
-/* line 15, ../../../scss/system-requirements-check-settings.scss */
+  border-style: dotted; }
 .src-wrap hr.thick {
   border-style: solid;
-  border-color: #ccc;
-}
-/* line 21, ../../../scss/system-requirements-check-settings.scss */
+  border-color: #ccc; }
 .src-wrap .settings_box {
   width: 100%;
   padding: 16px 16px 0;
@@ -22,57 +17,34 @@
   box-shadow: 0 3px 0 0 #dbdbdb;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 32, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box h3 {
-  margin: 0;
-  text-transform: uppercase;
-}
-/* line 37, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box h4 {
-  margin: 16px 0 6px;
-  text-transform: uppercase;
-}
-/* line 42, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box p {
-  margin: 6px 0 16px;
-  text-transform: none;
-}
-/* line 47, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box p:last-child {
-  margin-bottom: 0;
-}
-/* line 51, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box code {
-  background-color: transparent;
-  padding: 0;
-  font-weight: normal;
-}
-/* line 60, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box .settings_form label {
-  display: inline-block;
-  margin: 6px 0;
-}
-/* line 65, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box .settings_form .src-cb {
-  margin-right: 8px;
-}
-/* line 69, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box .settings_form label.fixed-width {
-  width: 110px;
-}
-/* line 73, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .settings_box .settings_form input[type=text] {
-  width: 50px;
-}
-@media (max-width: 1010px) {
-  /* line 79, ../../../scss/system-requirements-check-settings.scss */
+  box-sizing: border-box; }
+  .src-wrap .settings_box h3 {
+    margin: 0;
+    text-transform: uppercase; }
+  .src-wrap .settings_box h4 {
+    margin: 16px 0 6px;
+    text-transform: uppercase; }
+  .src-wrap .settings_box p {
+    margin: 6px 0 16px;
+    text-transform: none; }
+  .src-wrap .settings_box p:last-child {
+    margin-bottom: 0; }
+  .src-wrap .settings_box code {
+    background-color: transparent;
+    padding: 0;
+    font-weight: normal; }
+  .src-wrap .settings_box .settings_form label {
+    display: inline-block;
+    margin: 6px 0; }
   .src-wrap .settings_box .settings_form .src-cb {
-    display: block;
-  }
-}
-/* line 89, ../../../scss/system-requirements-check-settings.scss */
+    margin-right: 8px; }
+  .src-wrap .settings_box .settings_form label.fixed-width {
+    width: 110px; }
+  .src-wrap .settings_box .settings_form input[type=text] {
+    width: 50px; }
+  @media (max-width: 1010px) {
+    .src-wrap .settings_box .settings_form .src-cb {
+      display: block; } }
 .src-wrap .donation-box {
   background-color: #fff;
   padding: 16px;
@@ -82,17 +54,11 @@
   border-radius: 5px;
   -moz-box-shadow: 0 3px 0 0 #dbdbdb;
   -webkit-box-shadow: 0 3px 0 0 #dbdbdb;
-  box-shadow: 0 3px 0 0 #dbdbdb;
-}
-/* line 97, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .donation-box p:first-child {
-  margin-top: 0;
-}
-/* line 101, ../../../scss/system-requirements-check-settings.scss */
-.src-wrap .donation-box .callout:last-child {
-  margin-bottom: 0;
-}
-/* line 108, ../../../scss/system-requirements-check-settings.scss */
+  box-shadow: 0 3px 0 0 #dbdbdb; }
+  .src-wrap .donation-box p:first-child {
+    margin-top: 0; }
+  .src-wrap .donation-box .callout:last-child {
+    margin-bottom: 0; }
 .src-wrap .callout {
   padding: 3px 6px;
   margin: 16px 0;
@@ -100,21 +66,12 @@
   background-color: #f8f8f8;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-/* line 117, ../../../scss/system-requirements-check-settings.scss */
+  box-sizing: border-box; }
 .src-wrap .callout.info {
-  border-color: #00aeff;
-}
-/* line 121, ../../../scss/system-requirements-check-settings.scss */
+  border-color: #00aeff; }
 .src-wrap .callout.warning {
-  border-color: #ff9200;
-}
-/* line 125, ../../../scss/system-requirements-check-settings.scss */
+  border-color: #ff9200; }
 .src-wrap .callout.danger {
-  border-color: #ff2700;
-}
-/* line 129, ../../../scss/system-requirements-check-settings.scss */
+  border-color: #ff2700; }
 .src-wrap .callout.success {
-  border-color: #00cc00;
-}
+  border-color: #00cc00; }
