@@ -54,12 +54,24 @@ class System_Requirements_Check_Settings {
 							'std'		=> '1'
 						),
 						array(
+							'name'		=> 'windows_10',
+							'std'		=> '1'
+						),
+						array(
 							'name'		=> 'mac',
+							'std'		=> '1'
+						),
+						array(
+							'name'		=> 'linux',
 							'std'		=> '1'
 						),
 						array(
 							'name'		=> 'ie',
 							'std'		=> '9'
+						),
+						array(
+							'name'		=> 'edge',
+							'std'		=> '12'
 						),
 						array(
 							'name'		=> 'firefox',

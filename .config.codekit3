@@ -97,38 +97,38 @@
 		"oAP": "\/build\/assets\/font\/systemrequirementscheck.woff",
 		"oF": 0
 		},
-	"\/source\/assets\/scripts\/check-cookies.js": {
+	"\/source\/assets\/script\/check-cookies.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/assets\/js\/check-cookies.js",
+		"oAP": "\/build\/assets\/script\/check-cookies.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/assets\/scripts\/check-flash.js": {
+	"\/source\/assets\/script\/check-flash.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/assets\/js\/check-flash.js",
+		"oAP": "\/build\/assets\/script\/check-flash.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/assets\/scripts\/check-java.js": {
+	"\/source\/assets\/script\/check-java.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/assets\/js\/check-java.js",
+		"oAP": "\/build\/assets\/script\/check-java.js",
 		"oF": 2,
 		"sC": 3,
 		"tS": 0
 		},
-	"\/source\/assets\/scripts\/check-js.js": {
+	"\/source\/assets\/script\/check-js.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/build\/assets\/js\/check-js.js",
+		"oAP": "\/build\/assets\/script\/check-js.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 0
@@ -209,12 +209,6 @@
 		"oAP": "\/build\/includes\/admin\/system-requirements-check-settings-form.php",
 		"oF": 0
 		},
-	"\/source\/includes\/admin\/system-requirements-check-settings-todos.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/includes\/admin\/system-requirements-check-settings-todos.php",
-		"oF": 0
-		},
 	"\/source\/includes\/class-system-requirements-check-shortcodes.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -255,7 +249,7 @@
 	"displayValue": "system-requirements-check",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 499716598
+	"lastBuiltDate": 499717683
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1565,7 +1559,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "swfobject,deployJava",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

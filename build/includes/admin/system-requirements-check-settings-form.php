@@ -32,7 +32,11 @@
     		
     		<label class="src-cb"><input type="checkbox" name="windows_81" value="1" <?php checked('1', get_option('windows_81')); ?> />Windows 8.1 </label>
     		
+    		<label class="src-cb"><input type="checkbox" name="windows_10" value="1" <?php checked('1', get_option('windows_10')); ?> />Windows 10 </label>
+    		
     		<label class="src-cb"><input type="checkbox" name="mac" value="1" <?php checked('1', get_option('mac')); ?> />Mac OS X </label>
+    		
+    		<label class="src-cb"><input type="checkbox" name="linux" value="1" <?php checked('1', get_option('linux')); ?> />Mac OS X </label>
     		
     		<hr />
     		
@@ -42,6 +46,9 @@
     		
     		<label class="fixed-width" for="settings-ie">Internet Explorer</label>
     		<input type="text" id="settings-ie" name="ie" value="<?php esc_attr_e(get_option('ie')); ?>" />
+    		<br />
+    		<label class="fixed-width" for="settings-ie">Microsoft Edge</label>
+    		<input type="text" id="settings-edge" name="edge" value="<?php esc_attr_e(get_option('edge')); ?>" />
     		<br />
     		<label class="fixed-width" for="settings-firefox">Mozilla Firefox</label>
     		<input type="text" id="settings-firefox" name="firefox" value="<?php esc_attr_e(get_option('firefox')); ?>" />

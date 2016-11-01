@@ -6,6 +6,12 @@ A minimum system requirements plugin that checks for specified version of the op
 
 == Changelog ==
 
+= 1.1.0 =
+* Removed jQuery dependency
+* Added Windows 10 detection
+* Added Microsoft Edge detection
+* Added Linux system detection
+
 = 1.0.0 =
 * Tested to be compatible with WordPress version 4.1
 * Taking SSL connections into consideration with requesting script files

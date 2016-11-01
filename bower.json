@@ -12,7 +12,7 @@
     "requirements",
     "check"
   ],
-  "license": "MIT",
+  "license": "GPL2",
   "private": true,
   "ignore": [
     "**/.*",

@@ -65,6 +65,7 @@ class System_Requirements_Check_Shortcode {
                            '/windows nt 6.1/i'     => prep(get_option('windows_7')),
                            '/windows nt 6.2/i'     => prep(get_option('windows_8')),
                            '/windows nt 6.3/i'     => prep(get_option('windows_81')),
+                           '/windows nt 10.0/i'    => prep(get_option('windows_10')),
                            '/macintosh|mac os x/i' => prep(get_option('mac'))
                           );
         $agent = $GLOBALS['system_to_check']->getAgent();
@@ -97,9 +98,17 @@ class System_Requirements_Check_Shortcode {
                 $icon = '<span class="icon-windows8 big"></span>';
                 $os = 'Windows 8.1';
                 break;
+                case '/windows nt 10.0/i':
+                $icon = '<span class="icon-windows8 big"></span>';
+                $os = 'Windows 10';
+                break;
                 case '/macintosh|mac os x/i':
                 $icon = '<span class="icon-apple big"></span>';
                 $os = 'Mac OS X';
+                break;
+                case '/linux/i':
+                $icon = '<span class="icon-linux big"></span>';
+                $os = 'Linux';
                 break;
             }
 
@@ -156,9 +165,17 @@ class System_Requirements_Check_Shortcode {
             if (prep(get_option('windows_81')) == '1') {
                 $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
             }
+            
+            if (prep(get_option('windows_10')) == '1') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 10';
+            }
 
             if (prep(get_option('mac')) == '1') {
                 $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+            }
+            
+            if (prep(get_option('linux')) == '1') {
+                $result[] = '<span class="icon-linux '.$ico.'"></span> Linux';
             }
 
         } else {
@@ -182,9 +199,17 @@ class System_Requirements_Check_Shortcode {
             if (prep(get_option('windows_81')) == '1' && $system != 'Windows 8.1') {
                 $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
             }
+            
+            if (prep(get_option('windows_10')) == '1' && $system != 'Windows 10') {
+                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 10';
+            }
 
             if (prep(get_option('mac')) == '1' && $system != 'Mac OS X') {
                 $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+            }
+            
+            if (prep(get_option('linux')) == '1' && $system != 'Linux') {
+                $result[] = '<span class="icon-linux '.$ico.'"></span> Linux';
             }
 
         }
@@ -209,6 +234,7 @@ class System_Requirements_Check_Shortcode {
     public function checkBrowser() {
 
         $browserToCheck = array('/msie|trident/i'   => prep(get_option('ie')),
+                                '/edge/i'           => prep(get_option('edge')),
                                 '/firefox/i'        => prep(get_option('firefox')),
                                 '/chrome/i'         => prep(get_option('chrome')),
                                 '/safari/i'         => prep(get_option('safari')),
@@ -237,6 +263,10 @@ class System_Requirements_Check_Shortcode {
                     case 'msie':
                     $icon = '<span class="icon-ie big"></span>';
                     $browser = 'Internet Explorer';
+                    break;
+                    case 'edge':
+                    $icon = '<span class="icon-ie big"></span>';
+                    $browser = 'Microsoft Edge';
                     break;
                     case 'firefox':
                     $icon = '<span class="icon-firefox big"></span>';
@@ -322,7 +352,11 @@ class System_Requirements_Check_Shortcode {
             if (prep(get_option('ie')) >= '1') {
                 $result[] = '<span class="icon-ie '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Internet Explorer</a><span class="icon-link"></span> <small>(version '. prep(get_option('ie')) .'+)</small>';
             }
-
+            
+            if (prep(get_option('edge')) >= '12') {
+                $result[] = '<span class="icon-ie '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Edge</a><span class="icon-link"></span>.';
+            }
+            
             if (prep(get_option('firefox')) >= '1') {
                 $result[] = '<span class="icon-firefox '.$ico.'"></span> <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a><span class="icon-link"></span> <small>(version '. prep(get_option('firefox')) .'+)</small>';
             }
@@ -343,6 +377,10 @@ class System_Requirements_Check_Shortcode {
 
             if (prep(get_option('ie')) >= '1' && $browser != 'Internet Explorer') {
                 $result[] = '<span class="icon-ie '.$ico.'"></span> Internet Explorer '. prep(get_option('ie')) .'+';
+            }
+            
+            if (prep(get_option('edge')) >= '12' && $browser != 'Microsoft Edge') {
+                $result[] = '<span class="icon-ie '.$ico.'"></span> Microsoft Edge';
             }
 
             if (prep(get_option('firefox')) >= '1' && $browser != 'Firefox') {
@@ -387,7 +425,7 @@ class System_Requirements_Check_Shortcode {
 
         if ($js == 0) return '';
 
-        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJS.js"></script><noscript><div class="callout danger"><p><span class="icon-danger big red"></span><span class="icon-javascript big"></span><strong>JavaScript is disabled!</strong> - Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-js.js"></script><noscript><div class="callout danger"><p><span class="icon-danger big red"></span><span class="icon-javascript big"></span><strong>JavaScript is disabled!</strong> - Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
 
     }
 
@@ -405,7 +443,7 @@ class System_Requirements_Check_Shortcode {
 
         if ($cookies == 0) return '';
 
-        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkCookies.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-cookies.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Cookies check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
 
     }
 
@@ -423,7 +461,7 @@ class System_Requirements_Check_Shortcode {
 
         if ($jre <= 0) return '';
 
-        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkJava.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><span class="icon-java big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<input id="checkJV" type="hidden" value="'.$jre.'" /><script type="text/javascript" src="http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://java.com/js/deployJava.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-java.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><span class="icon-java big"></span><strong>Java check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
 
     }
 
@@ -441,7 +479,7 @@ class System_Requirements_Check_Shortcode {
 
         if ($flash <= 0) return '';
 
-        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/js/checkFlash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+        return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-flash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
 
     }
 
@@ -451,9 +489,6 @@ class System_Requirements_Check_Shortcode {
      */
     public function frontend_scripts() {
 
-        wp_deregister_script('jquery');
-        wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js", false, null);
-        wp_enqueue_script('jquery');
         wp_enqueue_style('system-requirements-check-frontend', '' . SYSTEM_REQ_URL . '/assets/css/system-requirements-check-frontend.css');
 
     }
