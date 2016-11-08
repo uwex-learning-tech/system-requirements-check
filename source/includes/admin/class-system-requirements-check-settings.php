@@ -63,7 +63,7 @@ class System_Requirements_Check_Settings {
 						),
 						array(
 							'name'		=> 'linux',
-							'std'		=> '1'
+							'std'		=> '0'
 						),
 						array(
 							'name'		=> 'ie',
