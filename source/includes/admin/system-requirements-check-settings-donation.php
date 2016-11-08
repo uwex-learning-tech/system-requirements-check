@@ -6,5 +6,5 @@
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
         <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
     </form>
-	<div class="callout success"><strong>Have questions, suggestions, or ideas?</strong> Post them on <a href="https://wordpress.org/support/plugin/system-requirements-check" target="_blank">System Requirements Check Plugin Support</a>.</div>
+	<div class="callout success"><strong>Have questions, suggestions, or ideas?</strong> Post them on <a href="https://github.com/Lin87/system-requirements-check/issues" target="_blank">System Requirements Check GitHub Repository</a>.</div>
 </div>

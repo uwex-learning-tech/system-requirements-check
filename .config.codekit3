@@ -7,7 +7,7 @@
 		"uuidString": "35658B9B-94AE-42BF-B865-D5A8B0D53269"
 		}
 	],
-"creatorBuild": "25390",
+"creatorBuild": "25444",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -249,7 +249,7 @@
 	"displayValue": "system-requirements-check",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 499717683
+	"lastBuiltDate": 499730035
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -266,6 +266,9 @@
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"async-generator-functions": {
+			"active": 0
+			},
 		"async-to-generator": {
 			"active": 0
 			},
@@ -1354,6 +1357,10 @@
 			"active": 0,
 			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
 			},
+		"no-useless-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-var": {
 			"active": 0,
 			"optionString": ""
@@ -1421,10 +1428,6 @@
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
-			},
-		"prefer-reflect": {
-			"active": 0,
-			"optionString": "{'exceptions': []}"
 			},
 		"prefer-rest-params": {
 			"active": 0,
