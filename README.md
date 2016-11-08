@@ -10,6 +10,7 @@ A minimum system requirements plugin that checks for specified version of the op
 * Updated links
 * Fixed Linux label
 * Set Linux check to off by default
+* Added an option to disable all operating systems check
 
 = 1.1.1 =
 * Updated links

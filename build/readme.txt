@@ -49,6 +49,7 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 * Updated links
 * Fixed Linux label
 * Set Linux check to off by default
+* Added an option to disable all operating systems check
 
 = 1.1.1 =
 * Fixed minor errors (mostly grammar)
