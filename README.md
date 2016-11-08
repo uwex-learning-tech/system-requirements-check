@@ -13,11 +13,6 @@ A minimum system requirements plugin that checks for specified version of the op
 * Added an option to disable all operating systems check
 
 = 1.1.1 =
-* Updated links
-* Fixed Linux label
-* Set Linux check to off by default
-
-= 1.1.1 =
 * Fixed minor errors (mostly grammar)
 
 = 1.0.0 =
