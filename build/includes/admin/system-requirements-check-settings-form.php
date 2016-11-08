@@ -36,7 +36,7 @@
     		
     		<label class="src-cb"><input type="checkbox" name="mac" value="1" <?php checked('1', get_option('mac')); ?> />Mac OS X </label>
     		
-    		<label class="src-cb"><input type="checkbox" name="linux" value="1" <?php checked('1', get_option('linux')); ?> />Mac OS X </label>
+    		<label class="src-cb"><input type="checkbox" name="linux" value="1" <?php checked('1', get_option('linux')); ?> />Linux </label>
     		
     		<hr />
     		
