@@ -22,6 +22,10 @@
     		
     		<p>Select the minimum operating systems required.</p>
     		
+    		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable all operating systems check.</label>
+    		
+    		<div class="callout danger"><strong>Important:</strong> If "Disable all operating system check" is checked, operating systems will not be checked and displayed even if they are checked below.</div>
+    		
     		<label class="src-cb"><input type="checkbox" name="windows_xp" value="1" <?php checked('1', get_option('windows_xp')); ?> />Windows XP </label>
     		
     		<label class="src-cb"><input type="checkbox" name="windows_vista" value="1" <?php checked('1', get_option('windows_vista')); ?> />Windows Vista </label>

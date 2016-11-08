@@ -38,8 +38,13 @@ class System_Requirements_Check_Shortcode {
      *
      */
     public function check_system_requirements() {
-
-        $osCallout = $this->checkOS();
+        
+        $osCallout = '';
+        
+        if ( get_option('disable_os_check') != '1' ) {
+            $osCallout = $this->checkOS();
+        }
+        
         $browserCallout = $this->checkBrowser();
         $jsCallout = $this->checkJS();
         $cookieCallout = $this->checkCookies();

@@ -33,6 +33,10 @@ class System_Requirements_Check_Settings {
 				'system_requirements' => array(
 					__( 'System Requirements', 'system_requirements_check' ),
 					array(
+    					array(
+							'name'		=> 'disable_os_check',
+							'std'		=> '0'
+						),
 					    array(
 							'name'		=> 'windows_xp',
 							'std'		=> '0'
