@@ -1,10 +1,16 @@
 System Requirements Check
 =========================
-**_version 1.1.2_**
+**_version 1.1.3_**
 
 A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
 
 == Changelog ==
+
+= 1.1.3 =
+* Updated existing icons
+* Added more icons
+* Added an option to disable web browsers check
+* Updated grammars and rephrased some sentences
 
 = 1.1.2 =
 * Updated links
