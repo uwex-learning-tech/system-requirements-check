@@ -70,6 +70,10 @@ class System_Requirements_Check_Settings {
 							'std'		=> '0'
 						),
 						array(
+							'name'		=> 'disable_browser_check',
+							'std'		=> '0'
+						),
+						array(
 							'name'		=> 'ie',
 							'std'		=> '9'
 						),

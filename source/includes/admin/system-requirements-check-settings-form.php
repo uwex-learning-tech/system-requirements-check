@@ -22,9 +22,12 @@
     		
     		<p>Select the minimum operating systems required.</p>
     		
-    		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable all operating systems check.</label>
     		
-    		<div class="callout danger"><strong>Important:</strong> If "Disable all operating system check" is checked, operating systems will not be checked and displayed even if they are checked below.</div>
+    		
+    		<div class="callout danger">
+        		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable operating systems check.</label><br>
+        		If selected, operating systems will not be checked and displayed even if they are selected below.
+            </div>
     		
     		<label class="src-cb"><input type="checkbox" name="windows_xp" value="1" <?php checked('1', get_option('windows_xp')); ?> />Windows XP </label>
     		
@@ -47,6 +50,11 @@
     		<h4>Web Browsers</h4>
     		
     		<p>Enter the <strong>minimum</strong> required version number for each web browser. If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</p>
+    		
+    		<div class="callout danger">
+        		<label class="src-cb"><input type="checkbox" name="disable_browser_check" value="1" <?php checked('1', get_option('disable_browser_check')); ?> />Disable web browsers check.</label><br>
+        		If selected, web browsers will not be checked and displayed even if they are specified below.
+            </div>
     		
     		<label class="fixed-width" for="settings-ie">Internet Explorer</label>
     		<input type="text" id="settings-ie" name="ie" value="<?php esc_attr_e(get_option('ie')); ?>" />

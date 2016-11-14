@@ -45,7 +45,10 @@ class System_Requirements_Check_Shortcode {
             $osCallout = $this->checkOS();
         }
         
-        $browserCallout = $this->checkBrowser();
+        if ( get_option('disable_browser_check') != '1' ) {
+            $browserCallout = $this->checkBrowser();
+        }
+        
         $jsCallout = $this->checkJS();
         $cookieCallout = $this->checkCookies();
         $javaCallout = $this->checkJava();
@@ -152,27 +155,27 @@ class System_Requirements_Check_Shortcode {
         if ($i) {
 
             if (prep(get_option('windows_xp')) == '1') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows XP';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows XP';
             }
 
             if (prep(get_option('windows_vista')) == '1') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows Vista';
             }
 
             if (prep(get_option('windows_7')) == '1') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows 7';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows 7';
             }
 
             if (prep(get_option('windows_8')) == '1') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 8';
             }
 
             if (prep(get_option('windows_81')) == '1') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 8.1';
             }
             
             if (prep(get_option('windows_10')) == '1') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 10';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10';
             }
 
             if (prep(get_option('mac')) == '1') {
@@ -186,27 +189,27 @@ class System_Requirements_Check_Shortcode {
         } else {
 
             if (prep(get_option('windows_xp')) == '1') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows XP';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows XP';
             }
 
             if (prep(get_option('windows_vista')) == '1' && $system != 'Windows Vista') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows Vista';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows Vista';
             }
 
             if (prep(get_option('windows_7')) == '1' && $system != 'Windows 7') {
-                $result[] = '<span class="icon-windows '.$ico.'"></span> Windows 7';
+                $result[] = '<span class="icon-windows-old '.$ico.'"></span> Windows 7';
             }
 
             if (prep(get_option('windows_8')) == '1' && $system != 'Windows 8') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 8';
             }
 
             if (prep(get_option('windows_81')) == '1' && $system != 'Windows 8.1') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 8.1';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 8.1';
             }
             
             if (prep(get_option('windows_10')) == '1' && $system != 'Windows 10') {
-                $result[] = '<span class="icon-windows8 '.$ico.'"></span> Windows 10';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10';
             }
 
             if (prep(get_option('mac')) == '1' && $system != 'Mac OS X') {
@@ -270,7 +273,7 @@ class System_Requirements_Check_Shortcode {
                     $browser = 'Internet Explorer';
                     break;
                     case 'edge':
-                    $icon = '<span class="icon-ie big"></span>';
+                    $icon = '<span class="icon-edge big"></span>';
                     $browser = 'Microsoft Edge';
                     break;
                     case 'firefox':
@@ -359,7 +362,7 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('edge')) >= '12') {
-                $result[] = '<span class="icon-ie '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Edge</a><span class="icon-link"></span>.';
+                $result[] = '<span class="icon-edge '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Edge</a><span class="icon-link"></span>.';
             }
             
             if (prep(get_option('firefox')) >= '1') {
@@ -385,7 +388,7 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('edge')) >= '12' && $browser != 'Microsoft Edge') {
-                $result[] = '<span class="icon-ie '.$ico.'"></span> Microsoft Edge';
+                $result[] = '<span class="icon-edge '.$ico.'"></span> Microsoft Edge';
             }
 
             if (prep(get_option('firefox')) >= '1' && $browser != 'Firefox') {
