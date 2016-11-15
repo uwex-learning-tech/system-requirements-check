@@ -136,5 +136,9 @@ icon-ip:before {
 .system_req_check .yellow {
   color: #ff9200; }
 
+.notes {
+  font-size: 80%;
+  line-height: 1.5; }
+
 #deployJavaPlugin {
   display: none; }
