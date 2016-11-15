@@ -1,18 +1,18 @@
 === Plugin Name ===
 Contributors: eslin87
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T452FJN25TWKG
-Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript, client
+Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript, client, screen, resolution, IP
 Requires at least: 3.0
 Tested up to: 4.6.1
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Checks for specified version of the operating systems, web browsers, Flash Player, JRE, cookie, and Javascript on the client side.
+Checks for specified version of the operating systems, web browsers, screen resolution, IP address, Flash Player, JRE, cookie, and Javascript on the client side.
 
 == Description ==
 
-A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
+A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, screen resolution, IP addresses, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
 
 == Installation ==
 
@@ -34,7 +34,7 @@ A minimum system requirements plugin that checks for specified version of the op
 
 = What is this plugin for? =
 
-This plugin will check the client’s operating system, web browser, Adobe Flash Player, cookie, Java Runtime Environment, and JavaScript to see if the client’s system mets your requirements that were set in the System Requirements Check settings page.
+This plugin will check the client’s operating system, web browser, screen resolution, IP addresses, Adobe Flash Player, cookie, Java Runtime Environment, and JavaScript to see if the client’s system mets your requirements that were set in the System Requirements Check settings page.
 
 == Screenshots ==
 
@@ -45,10 +45,12 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 
 == Changelog ==
 
-= 1.1.3 =
+= 1.2.0 =
 * Updated existing icons
 * Added more icons
 * Added an option to disable web browsers check
+* Added the option to display IP address
+* Added the option to display and check screen resolution
 * Updated grammars and rephrased some sentences
 * Fixed an issue where Safari version is incorrectly checked
 * Rephrased Java check messages
