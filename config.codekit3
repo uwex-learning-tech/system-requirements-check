@@ -36,7 +36,7 @@
 		"oF": 0
 		},
 	"\/config.rb": {
-		"ft": 131072,
+		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0
@@ -68,6 +68,12 @@
 		"oAP": "\/build\/assets\/font\/systemrequirementscheck.css",
 		"oF": 2,
 		"oS": 0
+		},
+	"\/source\/assets\/font\/systemrequirementscheck.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/build\/assets\/font\/systemrequirementscheck.ttf",
+		"oF": 0
 		},
 	"\/source\/assets\/script\/check-cookies.js": {
 		"ft": 64,
@@ -221,7 +227,7 @@
 	"displayValue": "system-requirements-check",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 500839413
+	"lastBuiltDate": 500876759
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

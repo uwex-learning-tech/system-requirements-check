@@ -11,6 +11,8 @@ A minimum system requirements plugin that checks for specified version of the op
 * Added more icons
 * Added an option to disable web browsers check
 * Updated grammars and rephrased some sentences
+* Rephrased Java check messages
+* Fixed an issue where Safari version is incorrectly checked
 
 = 1.1.2 =
 * Updated links

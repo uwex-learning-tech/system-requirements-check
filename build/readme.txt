@@ -50,6 +50,8 @@ This plugin will check the client’s operating system, web browser, Adobe Flash
 * Added more icons
 * Added an option to disable web browsers check
 * Updated grammars and rephrased some sentences
+* Fixed an issue where Safari version is incorrectly checked
+* Rephrased Java check messages
 
 = 1.1.2 =
 * Updated links
