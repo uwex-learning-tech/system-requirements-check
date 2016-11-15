@@ -36,7 +36,7 @@
 		"oF": 0
 		},
 	"\/config.rb": {
-		"ft": 8192,
+		"ft": 131072,
 		"oA": 0,
 		"oAP": "\/config.rb",
 		"oF": 0
@@ -227,7 +227,7 @@
 	"displayValue": "system-requirements-check",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 500876759
+	"lastBuiltDate": 500929542
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -484,7 +484,7 @@
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 1,
 	"buildFolderName": "build",
-	"cleanBuild": 1,
+	"cleanBuild": 0,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
 			"active": 0,
@@ -1538,7 +1538,7 @@
 		},
 	"esLintSourceType": 0,
 	"externalServerAddress": "http:\/\/localhost:8888",
-	"gitIgnoreBuildFolder": 1,
+	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "swfobject,deployJava",
 	"jsHintFlags2": {
