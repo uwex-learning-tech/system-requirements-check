@@ -299,7 +299,10 @@ class System_Requirements_Check_Shortcode {
 
                 if ($clientBrowser[0] != 'trident') {
 
-                    if ($clientBrowser[1] >= $value) {
+                    $browserVersion = intval(str_replace('.', '', $clientBrowser[1]));
+                    $targetVersion = intval(str_replace('.', '', $value));
+                    
+                    if ($browserVersion >= $targetVersion) {
                         $version = $clientBrowser[1];
                         $correctVersion = true;
                     } else {
@@ -307,7 +310,7 @@ class System_Requirements_Check_Shortcode {
                     }
 
                 } else {
-
+                    
                     if ($clientBrowser[1] >= '7') {
                         $version = 11;
                         $correctVersion = true;
