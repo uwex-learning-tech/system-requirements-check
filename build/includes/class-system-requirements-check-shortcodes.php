@@ -41,6 +41,10 @@ class System_Requirements_Check_Shortcode {
         
         $osCallout = '';
         
+        if ( get_option('ip') == '1' ) {
+            $ipCallout = $this->getIP();
+        }
+        
         if ( get_option('disable_os_check') != '1' ) {
             $osCallout = $this->checkOS();
         }
@@ -54,10 +58,30 @@ class System_Requirements_Check_Shortcode {
         $javaCallout = $this->checkJava();
         $flashCallout = $this->checkFlash();
 
-        return '<div class="system_req_check">' . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout . '</div>';
+        return '<div class="system_req_check">' . $ipCallout . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout . '</div>';
 
     }
-
+    
+    /**
+     * getIP function
+     *
+     * @access public
+     * @return string
+     *
+     */
+    public function getIP() {
+        
+        $ip = $_SERVER['REMOTE_ADDR'];
+        
+        if ( get_option('host_ip') == '1' ) {
+            $host = $_SERVER['SERVER_ADDR'];
+            return '<div class="callout success"><p><span class="icon-ip big"></span><strong>IP Addresses</strong></p><p>Your IP: ' .  $ip . '<br>Host\'s IP: ' . $host . '</p></div>';
+        }
+        
+        return '<div class="callout success"><p><span class="icon-ip big"></span><strong>IP Address: ' . $ip . '</strong></p></div>';
+        
+    }
+    
     /**
      * checkOS function
      *

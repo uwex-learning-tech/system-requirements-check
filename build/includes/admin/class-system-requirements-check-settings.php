@@ -113,6 +113,14 @@ class System_Requirements_Check_Settings {
 							'name'		=> 'flash',
 							'std'		=> '11'
 						),
+						array(
+							'name'		=> 'ip',
+							'std'		=> '0'
+						),
+						array(
+							'name'		=> 'host_ip',
+							'std'		=> '0'
+						)
 					),
 				)
 			)

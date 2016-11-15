@@ -163,12 +163,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/source\/includes\/admin\/class-system-requirements-check-settings.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/includes\/admin\/class-system-requirements-check-settings.php",
-		"oF": 0
-		},
 	"\/source\/includes\/admin\/system-requirements-check-functions.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -179,18 +173,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/build\/includes\/admin\/system-requirements-check-settings-donation.php",
-		"oF": 0
-		},
-	"\/source\/includes\/admin\/system-requirements-check-settings-form.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/includes\/admin\/system-requirements-check-settings-form.php",
-		"oF": 0
-		},
-	"\/source\/includes\/class-system-requirements-check-shortcodes.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/includes\/class-system-requirements-check-shortcodes.php",
 		"oF": 0
 		},
 	"\/source\/includes\/class-system-requirements-check-system.php": {
@@ -227,7 +209,7 @@
 	"displayValue": "system-requirements-check",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-owl",
-	"lastBuiltDate": 500929542
+	"lastBuiltDate": 500937866
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

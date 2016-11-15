@@ -2,10 +2,16 @@
 
 <div class="settings_box">
 
-    <h3>Settings</h3>
-
     <form method="post" action="options.php">
-    
+        
+        <p class="submit">
+    		<input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'system_requirements_check' ); ?>" />
+    	</p>
+    	
+    	<hr class="thick"/>
+        
+        <h3>Settings</h3>
+        
     	<?php
     	
     	    settings_fields($this->settings_group);
@@ -17,12 +23,12 @@
     	?>
     	
     	<div class="settings_form">
-    	
+            
+            
+            
     		<h4>Operating Systems</h4>
     		
     		<p>Select the minimum operating systems required.</p>
-    		
-    		
     		
     		<div class="callout danger">
         		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable operating systems check.</label><br>
@@ -73,6 +79,16 @@
     		<br />
     		<label class="fixed-width" for="settings-opera">Opera</label>
     		<input type="text" id="settings-opera" name="opera" value="<?php esc_attr_e(get_option('opera')); ?>" />
+    		
+    		<hr />
+    		
+    		<h4>IP Addresses</h4>
+    		
+    		<div class="callout danger"><strong>Important:</strong> Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author of this plugin will not be held responsible for any security breaches. Please use responsibly.</div>
+    		
+    		<label>Display client's IP address? <input type="checkbox" name="ip" value="1" <?php checked('1', get_option('ip')); ?> /></label>
+    		<br>
+    		<label>Display host's IP address? <input type="checkbox" name="host_ip" value="1" <?php checked('1', get_option('host_ip')); ?> /></label>
     		
     		<hr />
     		
