@@ -53,12 +53,16 @@ class System_Requirements_Check_Shortcode {
             $browserCallout = $this->checkBrowser();
         }
         
+        if ( get_option('screen') == '1' ) {
+            $screenCallout = $this->checkScreen();
+        }
+        
         $jsCallout = $this->checkJS();
         $cookieCallout = $this->checkCookies();
         $javaCallout = $this->checkJava();
         $flashCallout = $this->checkFlash();
 
-        return '<div class="system_req_check">' . $ipCallout . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout . '</div>';
+        return '<div class="system_req_check">' . $ipCallout . $screenCallout . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout .'</div>';
 
     }
     
@@ -73,7 +77,7 @@ class System_Requirements_Check_Shortcode {
         
         $ip = $_SERVER['REMOTE_ADDR'];
         
-        if ( get_option('host_ip') == '1' ) {
+        if ( prep(get_option('host_ip')) == '1' ) {
             $host = $_SERVER['SERVER_ADDR'];
             return '<div class="callout success"><p><span class="icon-ip big"></span><strong>IP Addresses</strong></p><p>Your IP: ' .  $ip . '<br>Host\'s IP: ' . $host . '</p></div>';
         }
@@ -515,6 +519,29 @@ class System_Requirements_Check_Shortcode {
         if ($flash <= 0) return '';
 
         return '<input id="checkFL" type="hidden" value="'.$flash.'" /><script src="http' . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . '://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-flash.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Adobe Flash Player check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+
+    }
+    
+    /**
+     * checkScreen function
+     *
+     * @access public
+     * @param none
+     * @return string
+     *
+     */
+    public function checkScreen() {
+        
+        if ( prep(get_option('disable_screen_check')) != '1' ) {
+            
+            $screenWidth = prep(get_option('screen_w'));
+            $screenHeight = prep(get_option('screen_h'));
+            
+            return '<input id="checkScreenW" type="hidden" value="'.$screenWidth.'" /><input id="checkScreenH" type="hidden" value="'.$screenHeight.'" /><input id="disableCheckScreen" type="hidden" value="0" /><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-screen.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Screen resolution check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
+            
+        }
+
+        return '<input id="disableCheckScreen" type="hidden" value="1" /><script type="text/javascript" src="'.SYSTEM_REQ_URL.'/assets/script/check-screen.js"></script><noscript><div class="callout warning"><p><span class="icon-cancel big yellow"></span><strong>Screen resolution check failed!</strong> - JavaScript is required. Please <a href="http://enable-javascript.com/" target="_blank">enable</a><span class="icon-link"></span> JavaScript!</p></div></noscript>';
 
     }
 

@@ -120,6 +120,22 @@ class System_Requirements_Check_Settings {
 						array(
 							'name'		=> 'host_ip',
 							'std'		=> '0'
+						),
+						array(
+							'name'		=> 'screen',
+							'std'		=> '0'
+						),
+						array(
+							'name'		=> 'disable_screen_check',
+							'std'		=> '1'
+						),
+						array(
+							'name'		=> 'screen_w',
+							'std'		=> '1024'
+						),
+						array(
+							'name'		=> 'screen_h',
+							'std'		=> '640'
 						)
 					),
 				)

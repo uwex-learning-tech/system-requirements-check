@@ -44,6 +44,9 @@
       width: 110px; }
     .src-wrap .settings_box .settings_form input[type=text] {
       width: 50px; }
+    .src-wrap .settings_box .settings_form input[type=number] {
+      width: 60px;
+      height: 25px; }
     @media (max-width: 1010px) {
       .src-wrap .settings_box .settings_form .src-cb {
         display: block; } }

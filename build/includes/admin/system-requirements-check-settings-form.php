@@ -65,7 +65,7 @@
     		<label class="fixed-width" for="settings-ie">Internet Explorer</label>
     		<input type="text" id="settings-ie" name="ie" value="<?php esc_attr_e(get_option('ie')); ?>" />
     		<br />
-    		<label class="fixed-width" for="settings-ie">Microsoft Edge</label>
+    		<label class="fixed-width" for="settings-edge">Microsoft Edge</label>
     		<input type="text" id="settings-edge" name="edge" value="<?php esc_attr_e(get_option('edge')); ?>" />
     		<br />
     		<label class="fixed-width" for="settings-firefox">Mozilla Firefox</label>
@@ -86,16 +86,32 @@
     		
     		<div class="callout danger"><strong>Important:</strong> Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author of this plugin will not be held responsible for any security breaches. Please use responsibly.</div>
     		
-    		<label>Display client's IP address? <input type="checkbox" name="ip" value="1" <?php checked('1', get_option('ip')); ?> /></label>
+    		<label><input type="checkbox" name="ip" value="1" <?php checked('1', get_option('ip')); ?> /> Display client's IP address</label>
     		<br>
-    		<label>Display host's IP address? <input type="checkbox" name="host_ip" value="1" <?php checked('1', get_option('host_ip')); ?> /></label>
+    		<label><input type="checkbox" name="host_ip" value="1" <?php checked('1', get_option('host_ip')); ?> /> Display host's IP address</label>
     		
     		<hr />
     		
     		<h4>JavaScript</h4>
     		<label>Check for JavaScript? <input type="checkbox" name="js" value="1" <?php checked('1', get_option('js')); ?> /></label>
             
-            <div class="callout danger"><strong>Important:</strong> Java Runtime Environment (JRE), cookie, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</div>
+            <div class="callout danger"><strong>Important:</strong> Java Runtime Environment (JRE), cookie, screen resolution, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</div>
+    		
+    		<hr />
+    		
+    		<h4>Screen Resolution</h4>
+    		
+    		<label class="src-cb"><input type="checkbox" name="screen" value="1" <?php checked('1', get_option('screen')); ?> /> Display client's screen resolution.</label><br>
+    		
+    		<div class="callout danger">
+        		If "Display client's screen resolution" is selected, screen resolution will not be checked even if it is specified below.
+            </div>
+    		
+    		<label class="src-cb"><input type="checkbox" name="disable_screen_check" value="1" <?php checked('1', get_option('disable_screen_check')); ?> /> Disable screen resolution check.</label><br>
+    		
+    		<input type="number" id="settings-screen-w" name="screen_w" size="4" value="<?php esc_attr_e(get_option('screen_w')); ?>" />
+    		&times;
+    		<input type="number" id="settings-screen-h" name="screen_h" size="4" value="<?php esc_attr_e(get_option('screen_h')); ?>" />
     		
     		<hr />
     		
