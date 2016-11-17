@@ -115,27 +115,27 @@ class System_Requirements_Check_Shortcode {
 
             switch($key) {
                 case '/windows nt 5.1/i':
-                $icon = '<span class="icon-windows big"></span>';
+                $icon = '<span class="icon-windows-old big"></span>';
                 $os = 'Windows XP';
                 break;
                 case '/windows nt 6.0/i':
-                $icon = '<span class="icon-windows big"></span>';
+                $icon = '<span class="icon-windows-old big"></span>';
                 $os = 'Windows Vista';
                 break;
                 case '/windows nt 6.1/i':
-                $icon = '<span class="icon-windows big"></span>';
+                $icon = '<span class="icon-windows-old big"></span>';
                 $os = 'Windows 7';
                 break;
                 case '/windows nt 6.2/i':
-                $icon = '<span class="icon-windows8 big"></span>';
+                $icon = '<span class="icon-windows-new big"></span>';
                 $os = 'Windows 8';
                 break;
                 case '/windows nt 6.3/i':
-                $icon = '<span class="icon-windows8 big"></span>';
+                $icon = '<span class="icon-windows-new big"></span>';
                 $os = 'Windows 8.1';
                 break;
                 case '/windows nt 10.0/i':
-                $icon = '<span class="icon-windows8 big"></span>';
+                $icon = '<span class="icon-windows-new big"></span>';
                 $os = 'Windows 10';
                 break;
                 case '/macintosh|mac os x/i':
