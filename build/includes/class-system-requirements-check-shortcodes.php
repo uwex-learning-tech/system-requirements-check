@@ -62,7 +62,7 @@ class System_Requirements_Check_Shortcode {
         $javaCallout = $this->checkJava();
         $flashCallout = $this->checkFlash();
 
-        return '<div class="system_req_check">' . $ipCallout . $screenCallout . $osCallout . $browserCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout .'</div>';
+        return '<div class="system_req_check">' . $ipCallout . $osCallout . $browserCallout . $screenCallout . $jsCallout . $cookieCallout . $javaCallout . $flashCallout .'</div>';
 
     }
     

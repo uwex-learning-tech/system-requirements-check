@@ -84,7 +84,7 @@
     		
     		<h4>IP Addresses</h4>
     		
-    		<div class="callout danger"><strong>Important:</strong> Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author of this plugin will not be held responsible for any security breaches. Please use responsibly.</div>
+    		<div class="callout danger">Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author of this plugin will not be held responsible for any security breaches. Please use responsibly.</div>
     		
     		<label><input type="checkbox" name="ip" value="1" <?php checked('1', get_option('ip')); ?> /> Display client's IP address</label>
     		<br>
@@ -95,7 +95,7 @@
     		<h4>JavaScript</h4>
     		<label>Check for JavaScript? <input type="checkbox" name="js" value="1" <?php checked('1', get_option('js')); ?> /></label>
             
-            <div class="callout danger"><strong>Important:</strong> Java Runtime Environment (JRE), cookie, screen resolution, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</div>
+            <div class="callout warning">Java Runtime Environment (JRE), cookie, screen resolution, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</div>
     		
     		<hr />
     		
@@ -103,8 +103,8 @@
     		
     		<label class="src-cb"><input type="checkbox" name="screen" value="1" <?php checked('1', get_option('screen')); ?> /> Display client's screen resolution.</label><br>
     		
-    		<div class="callout danger">
-        		If "Display client's screen resolution" is selected, screen resolution will not be checked even if it is specified below.
+    		<div class="callout info">
+        		If "Display client's screen resolution" is not selected, screen resolution will not be checked even if it is specified below. Screen resolution check is disabled by default, unselect "Disable screen resolution check" to enable screen resolution check.
             </div>
     		
     		<label class="src-cb"><input type="checkbox" name="disable_screen_check" value="1" <?php checked('1', get_option('disable_screen_check')); ?> /> Disable screen resolution check.</label><br>
@@ -122,7 +122,7 @@
     		<label for="settings-jre">Version </label>
     		<input type="text" id="settings-jre" name="jre" value="<?php esc_attr_e(get_option('jre')); ?>" />
     		
-    		<div class="callout warning"><strong>Note:</strong> Java Runtime Environment (JRE) version numbering system is different than the usual version numbering system. For instance, Java 7 Update 51 does not mean the version number is <code>7.x.x</code>. The version number is actually <code>1.<strong><em>7</em></strong>.0_<strong><em>51</em></strong></code> and should be entered as such.</div>
+    		<div class="callout info">Java Runtime Environment (JRE) version numbering system is different than the usual version numbering system. For instance, Java 7 Update 51 does not mean the version number is <code>7.x.x</code>. The version number is actually <code>1.<strong><em>7</em></strong>.0_<strong><em>51</em></strong></code> and should be entered as such.</div>
     		
     		<hr />
     		
