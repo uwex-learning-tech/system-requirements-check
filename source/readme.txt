@@ -8,7 +8,7 @@ Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Checks for specified version of the operating systems, web browsers, screen resolution, IP address, Flash Player, JRE, cookie, and Javascript on the client side.
+Checks for specified version of the operating systems, web browsers, screen resolution, IP address, Flash Player, JRE, cookie, and Javascript.
 
 == Description ==
 
@@ -38,10 +38,8 @@ This plugin will check the client’s operating system, web browser, screen reso
 
 == Screenshots ==
 
-1. The settings page
-2. The all-passed result
-3. Result with warnings
-4. What the requirements not met look like
+1. Results
+2. Settings page
 
 == Changelog ==
 
