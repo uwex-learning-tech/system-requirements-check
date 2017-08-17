@@ -1,12 +1,11 @@
 === Plugin Name ===
 Contributors: eslin87
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T452FJN25TWKG
-Tags: cookie, JRE, os, operating, system, flash, requirements, check, checker, browser, javascript, client, screen, resolution, IP
+Tags: operating, browser, cookie, requirements, JRE, javascript, system, flash, check, checker, os, client, screen, resolution, IP
 Requires at least: 3.0
-Tested up to: 4.7
+Tested up to: 4.8.1
 Stable tag: 1.2.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 Checks for specified version of the operating systems, web browsers, screen resolution, IP address, Flash Player, JRE, cookie, and Javascript.
 
