@@ -41,5 +41,5 @@ A minimum system requirements plugin that checks for specified version of the op
 **0.1.0**
 * First initial quick release
 ---
-License: GPL2 or later  
-Copyright 2014-2017. Ethan Lin and University of Wisconsin-Extension, Division of Continuing Education, Outreach & E-Learning.
+License: [https://github.com/oel-mediateam/system-requirements-check/blob/master/LICENSE](GNU v3)
+Copyright 2014-2017. Ethan Lin, Media Services, and University of Wisconsin-Extension, Division of Continuing Education, Outreach & E-Learning. All rights reserved.
