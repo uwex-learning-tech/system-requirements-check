@@ -1,5 +1,6 @@
 === Plugin Name ===
 Contributors: eslin87
+Donate link:
 Tags: operating, browser, cookie, requirements, JRE, javascript, system, flash, check, checker, os, client, screen, resolution, IP
 Requires at least: 3.0
 Tested up to: 4.8.1
