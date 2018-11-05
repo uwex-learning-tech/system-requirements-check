@@ -186,7 +186,6 @@ class System_Requirements_Check_Settings {
 			<div class="src-wrap">
 			    
 				<?php include_once(sprintf("%s",'system-requirements-check-settings-form.php')); ?>
-				<?php include_once(sprintf("%s",'system-requirements-check-settings-donation.php')); ?>
 				
 			</div>
 		</div>

@@ -7,8 +7,6 @@
 // settings page wrapper
 .src-wrap {
     
-    max-width: 800px;
-    
     hr {
         margin: 18px 0 16px;
         border-style: dotted;
@@ -17,6 +15,28 @@
     hr.thick {
         border-style: solid;
         border-color: #ccc;
+    }
+    
+    .instruction_box {
+        
+        width: 100%;
+    	padding: 16px;
+    	margin-top: 16px;
+    	background-color:#fff;
+    	
+    	@include border-radius( 5px );
+        @include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
+        @include box-sizing( "border-box" );
+        
+        h3 {
+        	margin: 0;
+        	text-transform: uppercase;
+    	}
+        
+        code {
+            font-size: 150%;
+        }
+        
     }
     
 	// settings box
@@ -93,20 +113,16 @@
     	
 	}
 	
-	.donation-box {
-	
-    	background-color: #fff;
-    	padding: 16px;
-    	margin-top: 16px;
-    	@include border-radius( 5px );
-    	@include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
+	.danger-text {
     	
-    	p:first-child {
-        	margin-top: 0;
-    	}
+    	color: $callout-danger-border;
+    	padding: 6px;
+    	margin: 16px 0;
+    	background-color: $callout-bg;
+    	@include box-sizing( "border-box" );
     	
-    	.callout:last-child {
-        	margin-bottom: 0;
+    	.src-cb {
+        	font-weight: bold;
     	}
     	
 	}

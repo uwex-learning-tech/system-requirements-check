@@ -1,14 +1,15 @@
-<div class="callout info"><strong>How to use:</strong> place the shortcode, <code>[system_requirements_check]</code>, on post or page where the result will be displayed.</div>
+<div class="instruction_box">
+    <h3>INSTRUCTION</h3>
+    <p>Place the shortcode (below) on post or page where the result is to be displayed.</p>
+    <p><strong><code>[system_requirements_check]</code></strong></p>
+    
+    <div class="callout info"><strong>Have questions, suggestions, or ideas?</strong> Post them on <a href="https://github.com/oel-mediateam/system-requirements-check/issues" target="_blank">System Requirements Check GitHub Repository</a>.</div>
+
+</div>
 
 <div class="settings_box">
 
     <form method="post" action="options.php">
-        
-        <p class="submit">
-    		<input type="submit" class="button-primary" value="<?php _e( 'Save Changes', 'system_requirements_check' ); ?>" />
-    	</p>
-    	
-    	<hr class="thick"/>
         
         <h3>Settings</h3>
         
@@ -24,15 +25,12 @@
     	
     	<div class="settings_form">
             
-            
-            
     		<h4>Operating Systems</h4>
     		
     		<p>Select the minimum operating systems required.</p>
     		
-    		<div class="callout danger">
-        		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable operating systems check.</label><br>
-        		If selected, operating systems will not be checked and displayed even if they are selected below.
+    		<div class="danger-text">
+        		<label class="src-cb"><input type="checkbox" name="disable_os_check" value="1" <?php checked('1', get_option('disable_os_check')); ?> />Disable operating systems check.</label><br>If selected, operating systems check is disabled even if they are selected below.
             </div>
     		
     		<label class="src-cb"><input type="checkbox" name="windows_xp" value="1" <?php checked('1', get_option('windows_xp')); ?> />Windows XP </label>
@@ -57,9 +55,9 @@
     		
     		<p>Enter the <strong>minimum</strong> required version number for each web browser. If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</p>
     		
-    		<div class="callout danger">
+    		<div class="danger-text">
         		<label class="src-cb"><input type="checkbox" name="disable_browser_check" value="1" <?php checked('1', get_option('disable_browser_check')); ?> />Disable web browsers check.</label><br>
-        		If selected, web browsers will not be checked and displayed even if they are specified below.
+        		If selected, web browsers check is disabled even if they are specified below.
             </div>
     		
     		<label class="fixed-width" for="settings-ie">Internet Explorer</label>
@@ -84,7 +82,7 @@
     		
     		<h4>IP Addresses</h4>
     		
-    		<div class="callout danger">Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author of this plugin will not be held responsible for any security breaches. Please use responsibly.</div>
+    		<div class="danger-text"><strong>Displaying IP address to the public may increase of the risk of a security breach. By choosing to display the IP address, you expressed or agreed that the author and any sponsors of this plugin cannot be held responsible for any security breaches. Please use responsibly.</strong></div>
     		
     		<label><input type="checkbox" name="ip" value="1" <?php checked('1', get_option('ip')); ?> /> Display client's IP address</label>
     		<br>
@@ -95,7 +93,7 @@
     		<h4>JavaScript</h4>
     		<label>Check for JavaScript? <input type="checkbox" name="js" value="1" <?php checked('1', get_option('js')); ?> /></label>
             
-            <div class="callout warning">Java Runtime Environment (JRE), cookie, screen resolution, and Adobe Flash Player checks require JavaScript to be enabled on the client's web browser.</div>
+            <div class="callout warning">Java Runtime Environment (JRE), cookie, screen resolution, and Adobe Flash Player checks require JavaScript on the client's web browser.</div>
     		
     		<hr />
     		
@@ -104,7 +102,7 @@
     		<label class="src-cb"><input type="checkbox" name="screen" value="1" <?php checked('1', get_option('screen')); ?> /> Display client's screen resolution.</label><br>
     		
     		<div class="callout info">
-        		If "Display client's screen resolution" is not selected, screen resolution will not be checked even if it is specified below. Screen resolution check is disabled by default, unselect "Disable screen resolution check" to enable screen resolution check.
+        		If "Display client's screen resolution" is not selected, screen resolution check is disabled even if it is specified below. Screen resolution check is not on by default, unselect "Disable screen resolution check" to enable screen resolution check.
             </div>
     		
     		<label class="src-cb"><input type="checkbox" name="disable_screen_check" value="1" <?php checked('1', get_option('disable_screen_check')); ?> /> Disable screen resolution check.</label><br>
@@ -117,7 +115,7 @@
     		
     		<h4>Java Runtime Environment (JRE)</h4>
     		
-    		<p>Enter the <strong>minimum</strong> required version number of the JRE. If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x.x</code> or <code>x.x.x</code>.</p>
+    		<p>Enter the <strong>minimum</strong> required version number of the JRE. If the version number is less than or equal to 0, it is disabled. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x.x</code> or <code>x.x.x</code></p>
     		
     		<label for="settings-jre">Version </label>
     		<input type="text" id="settings-jre" name="jre" value="<?php esc_attr_e(get_option('jre')); ?>" />
@@ -128,7 +126,7 @@
     		
     		<h4>Adobe Flash Player</h4>
     		
-    		<p>Enter the <strong>minimum</strong> required version number of the Adobe Flash Player. If the version number is less than or equal to 0, it will not be checked. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</p>
+    		<p>Enter the <strong>minimum</strong> required version number of the Adobe Flash Player. If the version number is less than or equal to 0, it is disabled. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</p>
     		
     		<label id="settings-flash">Version </label>
     		<input type="text" id="settings-flash" name="flash" value="<?php esc_attr_e(get_option('flash')); ?>" />
