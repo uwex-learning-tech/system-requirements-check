@@ -1,11 +1,32 @@
-# System Requirements Check (v1.2.0)
+# System Requirements Check (v1.2.1)
 
 **Requires WordPress Version: 3.0**  
-**Tested up to WordPress Version: 4.8.1**
+**Tested up to WordPress Version: 5.0**
 
-A minimum system requirements plugin that checks for specified version of the operating systems, web browsers, screen resolution, IP addresses, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client side. The result will be displayed on a post or page with the use of a short code to let the end-users be aware of that their system may not be optimal for specific tasks or operations.
+A system requirements plugin that checks for the specified version of the operating systems, web browsers, screen resolution, IP addresses, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client's system. The result can be displayed on a post or page with the use of a shortcode to let the end-users be aware that their system may not be optimal for specific tasks or operations.
+
+## Installation
+
+### Automatically in WordPress
+
+1. Login into your site’s dashboard
+2. Click Plugins on the left menu (administration role required)
+3. Click Add New
+4. Search for the “System Requirements Check” plugin
+5. Click Install Now and select OK
+6. Activate the plugin
+
+### Manual installation
+* Download the plugin file to your computer and unzip it
+* Using an FTP program, or your hosting control panel, upload the unzipped plugin folder to your WordPress installation's <code>wp-content/plugins/</code> directory.
+* Activate the plugin from the Plugins menu within the WordPress admin.
 
 ## Changelog
+
+**1.2.1**
+* Added plugin shortcode to the installation section on the readme.txt
+* Made plugin shortcode text on top of the Settings page extra large
+* Fixed the issue where the plugin thinks Chrome on iOS is Safari. Thanks to @laggedonuser for reporting and providing a fix.
 
 **1.2.0**
 * Updated existing icons
@@ -43,4 +64,4 @@ A minimum system requirements plugin that checks for specified version of the op
 
 ---
 ### License & Copyright
-System Requirements Check is licensed under [GNU v3](https://github.com/oel-mediateam/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2017. Ethan Lin, [Media Services](https://media.uwex.edu), and [University of Wisconsin-Extension, Division of Continuing Education, Outreach & E-Learning](http://ce.uwex.edu/). All rights reserved.
+System Requirements Check is licensed under [GNU v3](https://github.com/oel-mediateam/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2018. Ethan Lin, [Media Services](https://media.uwex.edu), and [University of Wisconsin-Extension, Division of Continuing Education, Outreach & E-Learning](http://ce.uwex.edu/). All rights reserved.
