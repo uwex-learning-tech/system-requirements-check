@@ -37,7 +37,7 @@ class System_Requirements_Check_System {
             'trident',
             'edge',
             'opera',
-            'chrome',
+            'chrome|crios',
             'safari'
         );
                 
@@ -94,9 +94,13 @@ class System_Requirements_Check_System {
     
         foreach($this->bro_array as $bro) {
     
-            if (preg_match("#($bro)#", $this->agent, $matchBrower)) {
-            
-                $browser[] = $matchBrower[0];
+            if (preg_match("#($bro)#", $this->agent, $matchBroswer)) {
+                
+                if ($matchBroswer[0] == "crios") {
+                    $browser[] = "chrome";
+                } else {
+                    $browser[] = $matchBroswer[0];
+                }
                 
                 if (preg_match("#(($bro)|(version))[/ ]?([0-9.]*)".(($bro=='opera')?'$':'')."#", $this->agent, $matchVersion)) {
                     //var_dump($matchVersion);
