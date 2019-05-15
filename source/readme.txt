@@ -2,8 +2,8 @@
 Contributors: eslin87
 Tags: operating, browser, cookie, requirements, JRE, javascript, system, flash, check, checker, os, client, screen, resolution, IP
 Requires at least: 3.0
-Tested up to: 5.0
-Stable tag: 1.2.1
+Tested up to: 5.2
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,9 @@ The shortcode is <code>[system_requirements_check]</code>. It is on top of the p
 2. Settings page
 
 == Changelog ==
+
+= 1.2.2 =
+* Updated screenshots and licensing info.
 
 = 1.2.1 =
 * Added plugin shortcode to the installation section on the readme.txt
