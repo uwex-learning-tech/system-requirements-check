@@ -8,7 +8,7 @@
  * Author URI: http://www.ethanslin.com
  * License: GPL2
  */
- /*  Copyright 2014-2019  Ethan Lin  (email : ethan.lin.05@gmail.com)
+ /*  Copyright 2014-2020  Ethan Lin and University of Wisconsin Extended Campus
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as

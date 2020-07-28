@@ -1,4 +1,4 @@
-# System Requirements Check (v1.2.1)
+# System Requirements Check (v1.2.2)
 
 **Requires WordPress Version: 3.0**  
 **Tested up to WordPress Version: 5.0**
@@ -22,6 +22,9 @@ A system requirements plugin that checks for the specified version of the operat
 * Activate the plugin from the Plugins menu within the WordPress admin.
 
 ## Changelog
+
+**1.2.2**
+* Nothing but a version bump
 
 **1.2.1**
 * Added plugin shortcode to the installation section on the readme.txt
@@ -64,4 +67,4 @@ A system requirements plugin that checks for the specified version of the operat
 
 ---
 ### License & Copyright
-System Requirements Check is licensed under [GNU v3](https://github.com/oel-mediateam/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2018. Ethan Lin, [Media Services](https://media.uwex.edu), and [University of Wisconsin-Extension, Division of Continuing Education, Outreach & E-Learning](http://ce.uwex.edu/). All rights reserved.
+System Requirements Check is licensed under [GNU v3](https://github.com/uwex-learning-tech/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2020. [Learning Technology & Media](https://media.uwex.edu), and [University of Wisconsin Extended Campus](http://ce.uwex.edu/). All rights reserved.
