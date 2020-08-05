@@ -2,7 +2,7 @@
 Contributors: eslin87
 Tags: operating, browser, cookie, requirements, JRE, javascript, system, flash, check, checker, os, client, screen, resolution, IP
 Requires at least: 3.0
-Tested up to: 5.4
+Tested up to: 5.5
 Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
