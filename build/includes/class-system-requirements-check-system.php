@@ -35,7 +35,7 @@ class System_Requirements_Check_System {
             'firefox',
             'msie',
             'trident',
-            'edge',
+            'edge|edg',
             'opera',
             'chrome|crios',
             'safari'
@@ -98,6 +98,8 @@ class System_Requirements_Check_System {
                 
                 if ($matchBroswer[0] == "crios") {
                     $browser[] = "chrome";
+                } else if ($matchBroswer[0] == "edg") {
+                    $browser[] = "edge";
                 } else {
                     $browser[] = $matchBroswer[0];
                 }

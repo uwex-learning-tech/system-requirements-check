@@ -102,7 +102,8 @@ class System_Requirements_Check_Shortcode {
                            '/windows nt 6.2/i'     => prep(get_option('windows_8')),
                            '/windows nt 6.3/i'     => prep(get_option('windows_81')),
                            '/windows nt 10.0/i'    => prep(get_option('windows_10')),
-                           '/macintosh|mac os x/i' => prep(get_option('mac'))
+                           '/macintosh|mac os x/i' => prep(get_option('mac')),
+                           '/linux/i'              => prep(get_option('linux'))
                           );
         $agent = $GLOBALS['system_to_check']->getAgent();
         $os = '';
@@ -270,9 +271,9 @@ class System_Requirements_Check_Shortcode {
     public function checkBrowser() {
 
         $browserToCheck = array('/msie|trident/i'   => prep(get_option('ie')),
-                                '/edge/i'           => prep(get_option('edge')),
+                                '/edge|edg/i'           => prep(get_option('edge')),
                                 '/firefox/i'        => prep(get_option('firefox')),
-                                '/chrome/i'         => prep(get_option('chrome')),
+                                '/chrome|crios/i'         => prep(get_option('chrome')),
                                 '/safari/i'         => prep(get_option('safari')),
                                 '/opera/i'          => prep(get_option('opera'))
                                 );
@@ -293,6 +294,27 @@ class System_Requirements_Check_Shortcode {
                 }
 
                 $browser = $clientBrowser[0];
+                
+                if ($clientBrowser[0] != 'trident') {
+
+                    $browserVersion = intval(str_replace('.', '', $clientBrowser[1]));
+                    $targetVersion = intval(str_replace('.', '', $value));
+                    
+                    if ($browserVersion >= $targetVersion) {
+                        $version = $clientBrowser[1];
+                        $correctVersion = true;
+                    } else {
+                        $version = $value;
+                    }
+
+                } else {
+                    
+                    if ($clientBrowser[1] >= '7') {
+                        $version = 11;
+                        $correctVersion = true;
+                    }
+
+                }
 
                 switch($browser) {
                     case 'trident':
@@ -301,8 +323,17 @@ class System_Requirements_Check_Shortcode {
                     $browser = 'Internet Explorer';
                     break;
                     case 'edge':
-                    $icon = '<span class="icon-edge big"></span>';
-                    $browser = 'Microsoft Edge';
+                    
+                    $cleanedVersion = str_replace('.', '', $version);
+                    
+                    if ( $cleanedVersion >= '79' ) {
+                        $icon = '<span class="icon-edge big"></span>';
+                        $browser = 'Microsoft Edge';
+                    } else {
+                        $icon = '<span class="icon-edge-legacy big"></span>';
+                        $browser = 'Microsoft Edge Legacy';
+                    }
+                    
                     break;
                     case 'firefox':
                     $icon = '<span class="icon-firefox big"></span>';
@@ -323,27 +354,6 @@ class System_Requirements_Check_Shortcode {
                     default:
                     $browser = 'Unsupported Web Browser';
                     break;
-                }
-
-                if ($clientBrowser[0] != 'trident') {
-
-                    $browserVersion = intval(str_replace('.', '', $clientBrowser[1]));
-                    $targetVersion = intval(str_replace('.', '', $value));
-                    
-                    if ($browserVersion >= $targetVersion) {
-                        $version = $clientBrowser[1];
-                        $correctVersion = true;
-                    } else {
-                        $version = $value;
-                    }
-
-                } else {
-                    
-                    if ($clientBrowser[1] >= '7') {
-                        $version = 11;
-                        $correctVersion = true;
-                    }
-
                 }
 
                 $found = true;

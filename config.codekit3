@@ -50,17 +50,23 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/source\/assets\/font\/systemrequirementscheck.css" : {
-      "aP" : 0,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
+    "\/source\/assets\/font\/systemrequirementscheck.eot" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
       "oA" : 2,
-      "oAP" : "\/build\/assets\/font\/systemrequirementscheck.css",
-      "oF" : 2,
-      "pg" : 0
+      "oAP" : "\/build\/assets\/font\/systemrequirementscheck.eot",
+      "oF" : 0
+    },
+    "\/source\/assets\/font\/systemrequirementscheck.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/assets\/font\/systemrequirementscheck.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 3758088159,
+      "prP" : 0
     },
     "\/source\/assets\/font\/systemrequirementscheck.ttf" : {
       "cB" : 0,
@@ -68,6 +74,14 @@
       "hM" : 0,
       "oA" : 2,
       "oAP" : "\/build\/assets\/font\/systemrequirementscheck.ttf",
+      "oF" : 0
+    },
+    "\/source\/assets\/font\/systemrequirementscheck.woff" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/assets\/font\/systemrequirementscheck.woff",
       "oF" : 0
     },
     "\/source\/assets\/script\/check-cookies.js" : {
@@ -262,7 +276,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "meme-owl",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 694464622.642959
+    "lastBuiltDate" : 694470870.150491
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -556,14 +570,14 @@
     "bowerUseExactVersion" : 0,
     "browserRefreshDelay" : 0,
     "browserslistString" : ">0.2%, last 2 versions, Firefox ESR, not dead",
-    "buildEnvironment" : 1,
+    "buildEnvironment" : 0,
     "buildFolderActive" : 1,
     "buildFolderName" : "build",
-    "cleanBuild" : 0,
+    "cleanBuild" : 1,
     "cssoForceMediaMerge" : 0,
     "cssoRestructure" : 1,
     "environmentVariableEntries" : [
-      "NODE_ENV:::development"
+      "NODE_ENV:::production"
     ],
     "esLintConfigFileHandlingType" : 1,
     "esLintECMAVersion" : 7,

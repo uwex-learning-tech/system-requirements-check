@@ -47,7 +47,6 @@ The shortcode is <code>[system_requirements_check]</code>. It is on top of the p
 == Changelog ==
 
 = 1.2.3 =
-* Added Windows 11 detection.
 * Fixed an issue where Microsoft Edge is identified as Google Chrome.
 * Minor fixes and updates
 

@@ -24,7 +24,6 @@ A system requirements plugin that checks for the specified version of the operat
 ## Changelog
 
 ** 1.2.3 **
-* Added Windows 11 detection.
 * Fixed an issue where Microsoft Edge is identified as Google Chrome.
 * Minor fixes and updates
 

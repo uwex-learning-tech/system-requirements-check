@@ -43,15 +43,15 @@ class System_Requirements_Check_Settings {
 						),
 						array(
 							'name'		=> 'windows_vista',
-							'std'		=> '1'
+							'std'		=> '0'
 						),
 						array(
 							'name'		=> 'windows_7',
-							'std'		=> '1'
+							'std'		=> '0'
 						),
 						array(
 							'name'		=> 'windows_8',
-							'std'		=> '1'
+							'std'		=> '0'
 						),
 						array(
 							'name'		=> 'windows_81',
@@ -79,23 +79,23 @@ class System_Requirements_Check_Settings {
 						),
 						array(
 							'name'		=> 'edge',
-							'std'		=> '12'
+							'std'		=> '108'
 						),
 						array(
 							'name'		=> 'firefox',
-							'std'		=> '27'
+							'std'		=> '108'
 						),
 						array(
 							'name'		=> 'chrome',
-							'std'		=> '33'
+							'std'		=> '108'
 						),
 						array(
 							'name'		=> 'safari',
-							'std'		=> '6'
+							'std'		=> '16'
 						),
 						array(
 							'name'		=> 'opera',
-							'std'		=> '12'
+							'std'		=> '96'
 						),
 						array(
 							'name'		=> 'jre',

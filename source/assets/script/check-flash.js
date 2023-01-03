@@ -39,7 +39,7 @@ ready( function() {
             node.className += ' danger';
         }
         
-        node.innerHTML = "<p><span class=\"icon-danger big red\"></span><strong>Adobe Flash Player is not installed or enabled!</strong></p><p>Adobe Flash Player version <strong>" + checkedVersion + " or greater</strong> is required. Please <a href=\"http://get.adobe.com/flashplayer/\" target=\"_blank\">install</a><span class=\"icon-link\"></span> or <a href=\"http://helpx.adobe.com/flash-player.html\" target=\"_blank\">enable</a><span class=\"icon-link\"></span> Adobe Flash Player.</p>";
+        node.innerHTML = "<p><span class=\"icon-danger big red\"></span><strong>Adobe Flash Player is not installed or enabled!</strong></p><p>Adobe Flash Player version <strong>" + checkedVersion + " or greater</strong> is required. Please <a href=\"http://helpx.adobe.com/flash-player.html\" target=\"_blank\">enable</a><span class=\"icon-link\"></span> Adobe Flash Player.</p> <p class='notes'><strong>Note:</strong> As of December 31<sup>st</sup>, 2020, Adobe Flash Player can no longer be downloaded from Adobe. Adobe strongly recommends all users immediately uninstall Flash Player to help protect their systems.</p>";
     
     } else if ( checkedVersion <= installedVersion ) {
         
