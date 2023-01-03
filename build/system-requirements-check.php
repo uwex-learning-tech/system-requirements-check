@@ -1,14 +1,14 @@
 <?php
 /**
  * Plugin Name: System Requirements Check
- * Plugin URI: https://github.com/oel-mediateam/system-requirements-check
+ * Plugin URI: https://github.com/uwex-learning-tech/system-requirements-check
  * Description: A system requirements plugin that checks for the specified version of the operating systems, web browsers, screen resolution, IP addresses, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client's system. The result can be displayed on a post or page with the use of a shortcode to let the end-users be aware that their system may not be optimal for specific tasks or operations.
- * Version: 1.2.1
+ * Version: 1.2.3
  * Author: Ethan Lin
- * Author URI: http://www.ethanslin.com
- * License: GPL2
+ * Author URI: https://github.com/Lin87
+ * License: GPLv3
  */
- /*  Copyright 2014-2018  Ethan Lin  (email : ethan.lin.05@gmail.com)
+ /*  Copyright 2014-2023. Ethan Lin and University of Wisconsin Extended Campus
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as

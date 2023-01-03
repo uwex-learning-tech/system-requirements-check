@@ -1,1 +1,88 @@
-function ready(e){"loading"!==document.readyState?e():document.addEventListener?document.addEventListener("DOMContentLoaded",e):document.attachEvent("onreadystatechange",function(){"loading"!==document.readyState&&e()})}ready(function(){var e=document.getElementsByClassName("system_req_check")[0],s=document.createElement("div"),n=window.screen.width,a=window.screen.height,t=document.getElementById("disableCheckScreen").value;if(s.classList?s.classList.add("callout"):s.className+=" callout",e.appendChild(s),"0"===t){var c=document.getElementById("checkScreenW").value,i=document.getElementById("checkScreenH").value;n<c?a<i?(s.classList?s.classList.add("danger"):s.className+=" danger",s.innerHTML='<p><span class="icon-danger big red"></span> <span class="icon-display big"></span><strong>Screen resolution ('+n+"&times;"+a+") is not optimal for viewing.</strong></p><p>Recommended screen resolution is "+c+"&times;"+i+" or greater.</p>"):(s.classList?s.classList.add("warning"):s.className+=" warning",s.innerHTML='<p><span class="icon-warning big yellow"></span> <span class="icon-display big"></span><strong>Screen resolution ('+n+"&times;"+a+") may not be optimal for viewing.</strong></p><p>Recommended screen resolution is "+c+"&times;"+i+" or greater.</p>"):(s.classList?s.classList.add("success"):s.className+=" success",s.innerHTML='<p><span class="icon-checkmark big green"></span> <span class="icon-display big"></span><strong>Screen resolution ('+n+"&times;"+a+") is optimal for viewing.</strong></p><p>Recommended screen resolution is "+c+"&times;"+i+" or greater.</p>")}else s.classList?s.classList.add("success"):s.className+=" success",s.innerHTML='<p><span class="icon-display big"></span><strong>Screen Resolution: '+n+"&times;"+a+"</strong></p>"});
+function ready( fn ) {
+    
+    if ( document.readyState !== 'loading' ) {
+        fn();
+    } else if ( document.addEventListener ) {
+        document.addEventListener( 'DOMContentLoaded', fn);
+    } else {
+        document.attachEvent( 'onreadystatechange', function() {
+            if ( document.readyState !== 'loading' ) {
+                fn();
+            }
+        } );
+    }
+    
+}
+
+ready( function() {
+    
+    var systemRC = document.getElementsByClassName( 'system_req_check' )[0];
+    var node = document.createElement( 'div' );
+    
+    var screenWidth = window.screen.width;
+    var screenHeight = window.screen.height;
+    
+    var disableCheck = document.getElementById( 'disableCheckScreen' ).value;
+    
+    if ( node.classList ) {
+        node.classList.add( 'callout' );
+    } else {
+        node.className += ' callout';
+    }
+    
+    systemRC.appendChild( node );
+    
+    if ( disableCheck === '0' ) {
+        
+        var targetScreenWidth = document.getElementById( 'checkScreenW' ).value;
+        var targetScreenHeight = document.getElementById( 'checkScreenH' ).value;
+        
+        if ( screenWidth < targetScreenWidth ) {
+            
+            if ( screenHeight < targetScreenHeight ) {
+                
+                if ( node.classList ) {
+                    node.classList.add( 'danger' );
+                } else {
+                    node.className += ' danger';
+                }
+                
+                node.innerHTML = "<p><span class=\"icon-danger big red\"></span> <span class=\"icon-display big\"></span><strong>Screen resolution (" + screenWidth + "&times;" + screenHeight + ") is not optimal for viewing.</strong></p><p>Recommended screen resolution is " + targetScreenWidth + "&times;" + targetScreenHeight + " or greater.</p>";
+                
+            } else {
+                
+                if ( node.classList ) {
+                    node.classList.add( 'warning' );
+                } else {
+                    node.className += ' warning';
+                }
+                
+                node.innerHTML = "<p><span class=\"icon-warning big yellow\"></span> <span class=\"icon-display big\"></span><strong>Screen resolution (" + screenWidth + "&times;" + screenHeight + ") may not be optimal for viewing.</strong></p><p>Recommended screen resolution is " + targetScreenWidth + "&times;" + targetScreenHeight + " or greater.</p>";
+                
+            }
+            
+        } else {
+            
+            if ( node.classList ) {
+                node.classList.add( 'success' );
+            } else {
+                node.className += ' success';
+            }
+            
+            node.innerHTML = "<p><span class=\"icon-checkmark big green\"></span> <span class=\"icon-display big\"></span><strong>Screen resolution (" + screenWidth + "&times;" + screenHeight + ") is optimal for viewing.</strong></p><p>Recommended screen resolution is " + targetScreenWidth + "&times;" + targetScreenHeight + " or greater.</p>";
+            
+        }
+        
+    } else {
+        
+        if ( node.classList ) {
+            node.classList.add( 'success' );
+        } else {
+            node.className += ' success';
+        }
+        
+        node.innerHTML = "<p><span class=\"icon-display big\"></span><strong>Screen Resolution: " + screenWidth + "&times;" + screenHeight + "</strong></p>";
+        
+    }
+        
+} );

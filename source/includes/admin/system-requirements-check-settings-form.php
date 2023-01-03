@@ -3,7 +3,7 @@
     <p>Place the shortcode (below) on post or page where the result is to be displayed.</p>
     <p><strong><code>[system_requirements_check]</code></strong></p>
     
-    <div class="callout info"><strong>Have questions, suggestions, or ideas?</strong> Post them on <a href="https://github.com/oel-mediateam/system-requirements-check/issues" target="_blank">System Requirements Check GitHub Repository</a>.</div>
+    <div class="callout info"><strong>Have questions, suggestions, or ideas?</strong> Post them on <a href="https://github.com/uwex-learning-tech/system-requirements-check/issues" target="_blank">System Requirements Check GitHub Repository</a>.</div>
 
 </div>
 
@@ -124,17 +124,21 @@
     		
     		<hr />
     		
-    		<h4>Adobe Flash Player</h4>
+    		<h4>Cookie</h4>
+    		<label>Check for cookie? <input type="checkbox" name="cookie" value="1" <?php checked('1', get_option('cookie')); ?> /> </label>
+    		
+        	<hr />
+        	
+        	<h4>Adobe Flash Player</h4>
+    		
+    		<div class="callout warning">Adobe no longer supports Flash Player after December 31, 2020 and blocked Flash content from running in Flash Player beginning January 12, 2021. Adobe strongly recommends all users immediately uninstall Flash Player to help protect their systems.</div>
     		
     		<p>Enter the <strong>minimum</strong> required version number of the Adobe Flash Player. If the version number is less than or equal to 0, it is disabled. Defaulted to 0 if left blanked or invalid. Version number can be entered as <code>x</code>, <code>x.x</code>, or <code>x.x.x</code>.</p>
     		
     		<label id="settings-flash">Version </label>
     		<input type="text" id="settings-flash" name="flash" value="<?php esc_attr_e(get_option('flash')); ?>" />
     		
-    		<hr />
-    		
-    		<h4>Cookie</h4>
-    		<label>Check for cookie? <input type="checkbox" name="cookie" value="1" <?php checked('1', get_option('cookie')); ?> /> </label>
+    		<!-- end of settings -->
     		
     		<hr class="thick"/>
     		

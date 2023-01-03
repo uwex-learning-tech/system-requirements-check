@@ -1,1 +1,33 @@
-function ready(e){"loading"!==document.readyState?e():document.addEventListener?document.addEventListener("DOMContentLoaded",e):document.attachEvent("onreadystatechange",function(){"loading"!==document.readyState&&e()})}ready(function(){var e=document.getElementsByClassName("system_req_check")[0],a=document.createElement("div");a.classList?(a.classList.add("callout"),a.classList.add("success")):a.className+=" callout success",e.appendChild(a),a.innerHTML='<p><span class="icon-checkmark big green"></span><span class="icon-javascript big"></span><strong>JavaScript is enabled!</strong></p>'});
+function ready( fn ) {
+    
+    if ( document.readyState !== 'loading' ) {
+        fn();
+    } else if ( document.addEventListener ) {
+        document.addEventListener( 'DOMContentLoaded', fn);
+    } else {
+        document.attachEvent( 'onreadystatechange', function() {
+            if ( document.readyState !== 'loading' ) {
+                fn();
+            }
+        } );
+    }
+    
+}
+
+ready( function() {
+    
+    var systemRC = document.getElementsByClassName( 'system_req_check' )[0];
+    var node = document.createElement( 'div' );
+    
+    if ( node.classList ) {
+        node.classList.add( 'callout' );
+        node.classList.add( 'success' );
+    } else {
+        node.className += ' callout success';
+    }
+    
+    systemRC.appendChild( node );
+    node.innerHTML = '<p><span class=\"icon-checkmark big green\"></span><span class=\"icon-javascript big\"></span><strong>JavaScript is enabled!</strong></p>';
+
+    
+} );
