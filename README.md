@@ -1,7 +1,7 @@
-# System Requirements Check (v1.2.2)
+# System Requirements Check (v1.2.3)
 
 **Requires WordPress Version: 3.0**  
-**Tested up to WordPress Version: 5.0**
+**Tested up to WordPress Version: 6.1**
 
 A system requirements plugin that checks for the specified version of the operating systems, web browsers, screen resolution, IP addresses, Adobe Flash Player, Java Runtime Environment (JRE), Cookie, and Javascript on the client's system. The result can be displayed on a post or page with the use of a shortcode to let the end-users be aware that their system may not be optimal for specific tasks or operations.
 
@@ -23,8 +23,13 @@ A system requirements plugin that checks for the specified version of the operat
 
 ## Changelog
 
+** 1.2.3 **
+* Added Windows 11 detection.
+* Fixed an issue where Microsoft Edge is identified as Google Chrome.
+* Minor fixes and updates
+
 **1.2.2**
-* Nothing but a version bump
+* Updated screenshots and licensing info.
 
 **1.2.1**
 * Added plugin shortcode to the installation section on the readme.txt
@@ -67,4 +72,4 @@ A system requirements plugin that checks for the specified version of the operat
 
 ---
 ### License & Copyright
-System Requirements Check is licensed under [GNU v3](https://github.com/uwex-learning-tech/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2020. [Learning Technology & Media](https://media.uwex.edu), and [University of Wisconsin Extended Campus](http://ce.uwex.edu/). All rights reserved.
+System Requirements Check is licensed under [GNU v3](https://github.com/uwex-learning-tech/system-requirements-check/blob/master/LICENSE) license. (c) 2014 - 2023. [Learning Technology & Media](https://media.uwex.edu), and [University of Wisconsin Extended Campus](http://ce.uwex.edu/). All rights reserved.
