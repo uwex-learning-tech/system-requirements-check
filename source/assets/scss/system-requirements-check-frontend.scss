@@ -1,7 +1,5 @@
 @import "variables";
 @import "systemrequirementscheckfont";
-@import "compass/css3/box-sizing";
-@import "compass/css3/opacity";
 
 .system_req_check {
     
@@ -11,7 +9,7 @@
     	margin-bottom: 5px;
     	border-left: solid 4px $callout-border;
     	background-color: $callout-bg;
-    	@include box-sizing( "border-box" );
+    	box-sizing: border-box;
     	
     	.warning {
         	color: #ff8100;
@@ -71,7 +69,7 @@
                 display: inline;
                 padding: 0;
                 margin: 0 10px 0 0;
-                @include opacity( .75 );
+                opacity: 0.75;
             }
             
     	}
@@ -97,15 +95,12 @@
     	background-color: $callout-danger-bg;
     }
     
-    span[class^="icon-"].big {
+    span[class^="icon-"].big,
+    span[class*=" icon-"].big {
         display: inline-block;
     	font-size: 200%;
     	vertical-align: bottom;
     	margin-right: 10px;
-    }
-    
-    span[class*=" icon-"].big {
-        @extend span[class^="icon-"].big;
     }
     
     .green {

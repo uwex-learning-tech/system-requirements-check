@@ -1,8 +1,4 @@
 @import "variables";
-@import "breakpoint";
-@import "compass/css3/border-radius";
-@import "compass/css3/box-shadow";
-@import "compass/css3/box-sizing";
 
 // settings page wrapper
 .src-wrap {
@@ -23,10 +19,9 @@
     	padding: 16px;
     	margin-top: 16px;
     	background-color:#fff;
-    	
-    	@include border-radius( 5px );
-        @include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
-        @include box-sizing( "border-box" );
+    	border-radius: 5px;
+    	box-shadow: 0 3px 0 0 #dbdbdb;
+    	box-sizing: border-box;
         
         h3 {
         	margin: 0;
@@ -46,10 +41,9 @@
     	padding: 16px 16px 0;
     	margin-top: 16px;
     	background-color:#fff;
-    	
-    	@include border-radius( 5px );
-        @include single-box-shadow( 0, 3px, 0, 0, #dbdbdb );
-        @include box-sizing( "border-box" );
+    	border-radius: 5px;
+    	box-shadow: 0 3px 0 0 #dbdbdb;
+    	box-sizing: border-box;
         
         h3 {
         	margin: 0;
@@ -101,14 +95,6 @@
             	height: 25px;
         	}
         	
-        	@include breakpoint( max-width $mobile ) {
-            	
-            	.src-cb {
-                	display: block;
-            	}
-            	
-        	}
-        	
     	}
     	
 	}
@@ -119,7 +105,7 @@
     	padding: 6px;
     	margin: 16px 0;
     	background-color: $callout-bg;
-    	@include box-sizing( "border-box" );
+    	box-sizing: border-box;
     	
     	.src-cb {
         	font-weight: bold;
@@ -134,7 +120,7 @@
     	margin: 16px 0;
     	border-left: solid 4px $callout-border;
     	background-color: $callout-bg;
-    	@include box-sizing( "border-box" );
+    	box-sizing: border-box;
 	}
 	
 	.callout.info {
