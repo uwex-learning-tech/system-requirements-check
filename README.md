@@ -1,4 +1,4 @@
-# System Requirements Check (v1.2.3)
+# System Requirements Check (v1.2.4)
 
 **Requires WordPress Version: 3.0**  
 **Tested up to WordPress Version: 6.1**
@@ -22,6 +22,9 @@ A system requirements plugin that checks for the specified version of the operat
 * Activate the plugin from the Plugins menu within the WordPress admin.
 
 ## Changelog
+
+** 1.2.4 **
+* Now display the specified Microsoft Edge version number in the small print for browser check.
 
 ** 1.2.3 **
 * Fixed an issue where Microsoft Edge is identified as Google Chrome.

@@ -3,7 +3,7 @@ Contributors: eslin87
 Tags: operating, browser, cookie, requirements, JRE, javascript, system, flash, check, checker, os, client, screen, resolution, IP
 Requires at least: 3.0
 Tested up to: 6.1
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -45,6 +45,9 @@ The shortcode is <code>[system_requirements_check]</code>. It is on top of the p
 2. Settings page
 
 == Changelog ==
+
+=1.2.4 =
+* Now display the specified Microsoft Edge version number in the small print for browser check.
 
 = 1.2.3 =
 * Fixed an issue where Microsoft Edge is identified as Google Chrome.

@@ -404,7 +404,7 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('edge')) >= '12') {
-                $result[] = '<span class="icon-edge '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Edge</a><span class="icon-link"></span>.';
+                $result[] = '<span class="icon-edge '.$ico.'"></span> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank">Microsoft Edge</a><span class="icon-link"></span> <small>(version '. prep(get_option('edge')) .'+)</small>';
             }
             
             if (prep(get_option('firefox')) >= '1') {
@@ -430,7 +430,7 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('edge')) >= '12' && $browser != 'Microsoft Edge') {
-                $result[] = '<span class="icon-edge '.$ico.'"></span> Microsoft Edge';
+                $result[] = '<span class="icon-edge '.$ico.'"></span> Microsoft Edge '. prep(get_option('edge')) .'+';
             }
 
             if (prep(get_option('firefox')) >= '1' && $browser != 'Firefox') {
