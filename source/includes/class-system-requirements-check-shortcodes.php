@@ -96,16 +96,17 @@ class System_Requirements_Check_Shortcode {
     public function checkOS() {
 
         $osToCheck = array(
-                           '/windows nt 5.1/i'     => prep(get_option('windows_xp')),
-                           '/windows nt 6.0/i'     => prep(get_option('windows_vista')),
-                           '/windows nt 6.1/i'     => prep(get_option('windows_7')),
-                           '/windows nt 6.2/i'     => prep(get_option('windows_8')),
-                           '/windows nt 6.3/i'     => prep(get_option('windows_81')),
-                           '/windows nt 10.0/i'    => prep(get_option('windows_10')),
-                           '/macintosh|mac os x/i' => prep(get_option('mac')),
-                           '/linux/i'              => prep(get_option('linux'))
+                           '/windows nt 5.1/i'           => prep(get_option('windows_xp')),
+                           '/windows nt 6.0/i'           => prep(get_option('windows_vista')),
+                           '/windows nt 6.1/i'           => prep(get_option('windows_7')),
+                           '/windows nt 6.2/i'           => prep(get_option('windows_8')),
+                           '/windows nt 6.3/i'           => prep(get_option('windows_81')),
+                           '/windows nt 10.0/i'          => prep(get_option('windows_10')),
+                           '/macintosh|macos|mac os x/i' => prep(get_option('mac')),
+                           '/linux/i'                    => prep(get_option('linux'))
                           );
         $agent = $GLOBALS['system_to_check']->getAgent();
+
         $os = '';
         $icon = '';
         $found = false;
@@ -137,11 +138,11 @@ class System_Requirements_Check_Shortcode {
                 break;
                 case '/windows nt 10.0/i':
                 $icon = '<span class="icon-windows-new big"></span>';
-                $os = 'Windows 10';
+                $os = 'Windows 10 (or later)';
                 break;
-                case '/macintosh|mac os x/i':
+                case '/macintosh|macos|mac os x/i':
                 $icon = '<span class="icon-apple big"></span>';
-                $os = 'Mac OS X';
+                $os = 'macOS';
                 break;
                 case '/linux/i':
                 $icon = '<span class="icon-linux big"></span>';
@@ -204,11 +205,11 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('windows_10')) == '1') {
-                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10 (or later)';
             }
 
             if (prep(get_option('mac')) == '1') {
-                $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+                $result[] = '<span class="icon-apple '.$ico.'"></span> macOS';
             }
             
             if (prep(get_option('linux')) == '1') {
@@ -238,11 +239,11 @@ class System_Requirements_Check_Shortcode {
             }
             
             if (prep(get_option('windows_10')) == '1' && $system != 'Windows 10') {
-                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10';
+                $result[] = '<span class="icon-windows-new '.$ico.'"></span> Windows 10 (or later)';
             }
 
-            if (prep(get_option('mac')) == '1' && $system != 'Mac OS X') {
-                $result[] = '<span class="icon-apple '.$ico.'"></span> Mac OS X';
+            if (prep(get_option('mac')) == '1' && $system != 'macOS') {
+                $result[] = '<span class="icon-apple '.$ico.'"></span> macOS';
             }
             
             if (prep(get_option('linux')) == '1' && $system != 'Linux') {

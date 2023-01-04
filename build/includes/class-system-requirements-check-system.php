@@ -28,7 +28,7 @@ class System_Requirements_Check_System {
             '/windows nt 6.1/i',
             '/windows nt 6.0/i',
             '/windows nt 5.1/i',
-            '/macintosh|mac os x/i',
+            '/macintosh|macos|mac os x/i',
             '/linux/i'
         );      
         $this->bro_array = array(
