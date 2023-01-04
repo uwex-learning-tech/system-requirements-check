@@ -46,7 +46,7 @@ The shortcode is <code>[system_requirements_check]</code>. It is on top of the p
 
 == Changelog ==
 
-=1.2.4 =
+= 1.2.4 =
 * Now display the specified Microsoft Edge version number in the small print for browser check.
 
 = 1.2.3 =
